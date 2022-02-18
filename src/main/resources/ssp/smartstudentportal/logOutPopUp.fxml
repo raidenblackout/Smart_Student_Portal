@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<VBox  alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#logOut" styleClass="logout" stylesheets="@../../PopUpLogout.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ssp.smartstudentportal.logOutPopUp">
+   <children>
+      <Label alignment="CENTER" text="Log Out" textAlignment="CENTER">
+         <font>
+            <Font size="14.5" />
+         </font>
+      </Label>
+   </children>
+</VBox>

@@ -1,0 +1,134 @@
+.root{
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+}
+
+.text-area{
+-fx-background-color: transparent;
+}
+.text-area .scroll-pane{
+-fx-background-color: transparent;
+}
+.text-area .scroll-pane .viewport{
+-fx-background-color: transparent;
+}
+.text-area .scroll-pane .content{
+-fx-background-color: transparent;
+}
+.text-area .scroll-pane .content .text{
+     -fx-margin-top: 10px;
+}
+
+.blue-main{
+    -fx-background-color: rgba(30, 161, 201,1);
+}
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color :transparent;
+    -fx-border-color :transparent;
+    -fx-background-radius : 0.0em;
+    -fx-border-radius :2.0em;
+}
+
+.scroll-bar:vertical, .scroll-bar:horizontal{
+    -fx-background-color :transparent;
+    -fx-border-color :transparent;
+    -fx-background-radius : 0.0em;
+    -fx-border-radius :2.0em;
+}
+
+.scroll-bar:horizontal .increment-button ,
+.scroll-bar:horizontal .decrement-button {
+    -fx-background-color :transparent;
+    -fx-background-radius : 0.0em;
+    -fx-padding :0.0 0.0 10.0 0.0;
+
+}
+
+.scroll-bar:vertical .increment-button ,
+.scroll-bar:vertical .decrement-button {
+    -fx-background-color :transparent;
+    -fx-background-radius : 0.0em;
+    -fx-padding :0.0 10.0 0.0 0.0;
+
+}
+
+ .scroll-bar .increment-arrow,
+ .scroll-bar .decrement-arrow{
+    -fx-shape : " ";
+    -fx-padding :0.15em 0.0;
+}
+
+ .scroll-bar:vertical .increment-arrow,
+ .scroll-bar:vertical .decrement-arrow{
+    -fx-shape : " ";
+    -fx-padding :0.0 0.15em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color :derive(black,90.0%);
+    -fx-background-insets : 2.0, 0.0, 0.0;
+    -fx-background-radius : 2.0em;
+}
+
+.scroll-bar:horizontal .thumb:hover,
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color :derive(#4D4C4F,10.0%);
+    -fx-background-insets : 2.0, 0.0, 0.0;
+    -fx-background-radius : 2.0em;
+}
+
+.current-chat{
+    -fx-background-color: rgba(218, 223, 225,1);
+    -fx-background-radius: 0.0em;
+    -fx-border-color: transparent;
+    -fx-border-radius: 0.0em;
+    -fx-padding: 0.0 0.0 0.0 0.0;
+}
+.unread-chat .text{
+    -fx-font-family: "Roboto";
+    -fx-font-size: 20.0px;
+    -fx-font-weight: bold;
+}
+
+.send-button:hover{
+    -fx-icon-color: white;
+}
+
+.bell:hover{
+    -fx-icon-color: rgba(30, 161, 201,1);
+}
+
+.my-text HBox{
+    -fx-background-color: rgba(30, 161, 201,0.5);
+}
+.others-text HBox{
+    -fx-background-color: rgba(0, 0, 0,0.1);
+    -fx-margin-top: 10px;
+}
+.chat-peoples > *:hover{
+    -fx-background-color: white;
+}
+
+.message-content{
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-padding: 10.0 10 10.0 10;
+}
+.selected-user{
+    -fx-background-color: white;
+}
+.main-btn: hover{
+    -fx-background-color: rgba(30, 161, 201,0.5);
+}
+.main-btn{
+    -fx-background-color: rgba(30, 161, 201,1);
+}
+.post-snippet: hover{
+    //set the background color to light grey
+    -fx-background-color: rgba(0,0,0,0.1);
+}
+.latin{
+    -fx-background-color: rgba(30, 161, 201,0.5);
+}

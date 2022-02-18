@@ -1,0 +1,1062 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<?import org.kordamp.ikonli.javafx.StackedFontIcon?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="924.0" prefWidth="1200.0" stylesheets="@../../chatMain.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox fx:id="leftBar" alignment="TOP_CENTER" maxWidth="350.0" minWidth="75.0" style="-fx-border-radius: 0 0 0 20;" HBox.hgrow="ALWAYS">
+               <children>
+                  <VBox alignment="BOTTOM_LEFT" minHeight="193.0" prefHeight="193.0" prefWidth="348.0" style="-fx-border-color: white; -fx-border-width: 0 1 0 0;" styleClass="blue-main">
+                     <children>
+                        <HBox alignment="CENTER_LEFT">
+                           <children>
+                              <Label fx:id="titleBar" text="Chat">
+                                 <font>
+                                    <Font size="35.0" />
+                                 </font>
+                              </Label>
+                              <HBox prefHeight="100.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                              <FontIcon fx:id="newMessage" iconLiteral="fa-pencil" iconSize="30" onMouseClicked="#showPopUp" styleClass="send-button" tabSize="0">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </FontIcon>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="46.0" prefWidth="317.0" />
+                        <TextField fx:id="searchBar" promptText="Search" style="-fx-background-color: white; -fx-background-radius: 20;" styleClass="text-area">
+                           <VBox.margin>
+                              <Insets right="10.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" top="10.0" />
+                           </padding>
+                        </TextField>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" left="30.0" />
+                     </padding>
+                  </VBox>
+                  <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="252.0" prefWidth="443.0" VBox.vgrow="ALWAYS">
+                     <content>
+                        <VBox fx:id="userArea" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-radius: 0 0 0 20; -fx-border-radius: 0 0 0 20; -fx-background-color: transparent;" styleClass="chat-peoples">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" fillHeight="false" prefHeight="80.0" prefWidth="382.0" style="-fx-border-color: rgba(30, 161, 201,1); -fx-border-width: 0 0 1 0;" styleClass="current-chat">
+                                 <children>
+                                    <StackedFontIcon prefHeight="78.0" prefWidth="73.0">
+                                       <children>
+                                          <FontIcon iconLiteral="fa-user" iconSize="30" selectionEnd="5" selectionStart="1" text="" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="60.0">
+                                             <font>
+                                                <Font size="89.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </FontIcon>
+                                          <FontIcon fill="#000000de" fontSmoothingType="LCD" iconColor="#00000089" iconLiteral="fa-circle" iconSize="40" stroke="#ffffff00" textAlignment="CENTER" />
+                                       </children>
+                                    </StackedFontIcon>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="309.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Parvez Hasan">
+                                             <font>
+                                                <Font name="Calibri Light" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hey What's up! I was wondering that ....">
+                                             <font>
+                                                <Font name="Calibri Light" size="13.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" fillHeight="false" layoutX="10.0" layoutY="10.0" prefHeight="80.0" prefWidth="398.0" style="-fx-border-color: rgba(30, 161, 201,1); -fx-border-width: 0 0 1 0;" styleClass="unread-chat">
+                                 <children>
+                                    <StackedFontIcon prefHeight="78.0" prefWidth="73.0">
+                                       <children>
+                                          <FontIcon iconLiteral="fa-user" iconSize="30" selectionEnd="5" selectionStart="1" text="" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="60.0">
+                                             <font>
+                                                <Font size="89.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </FontIcon>
+                                          <FontIcon fill="#000000de" fontSmoothingType="LCD" iconColor="#00000089" iconLiteral="fa-circle" iconSize="40" stroke="#ffffff00" textAlignment="CENTER" />
+                                       </children>
+                                    </StackedFontIcon>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="66.0" prefWidth="325.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text cache="true" cacheHint="QUALITY" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Parvez Hasan">
+                                             <font>
+                                                <Font name="Calibri Light" size="18.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hey What's up! I was wondering that ....">
+                                             <font>
+                                                <Font name="Calibri Light" size="13.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" fillHeight="false" layoutX="10.0" layoutY="10.0" prefHeight="80.0" prefWidth="382.0" style="-fx-border-color: rgba(30, 161, 201,1); -fx-border-width: 0 0 1 0;" styleClass="current-chat">
+                                 <children>
+                                    <StackedFontIcon prefHeight="78.0" prefWidth="73.0">
+                                       <children>
+                                          <FontIcon iconLiteral="fa-user" iconSize="30" selectionEnd="5" selectionStart="1" text="" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="60.0">
+                                             <font>
+                                                <Font size="89.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </FontIcon>
+                                          <FontIcon fill="#000000de" fontSmoothingType="LCD" iconColor="#00000089" iconLiteral="fa-circle" iconSize="40" stroke="#ffffff00" textAlignment="CENTER" />
+                                       </children>
+                                    </StackedFontIcon>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="309.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Parvez Hasan">
+                                             <font>
+                                                <Font name="Calibri Light" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hey What's up! I was wondering that ....">
+                                             <font>
+                                                <Font name="Calibri Light" size="13.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" fillHeight="false" layoutX="10.0" layoutY="170.0" prefHeight="80.0" prefWidth="382.0" style="-fx-border-color: rgba(30, 161, 201,1); -fx-border-width: 0 0 1 0;" styleClass="current-chat">
+                                 <children>
+                                    <StackedFontIcon prefHeight="78.0" prefWidth="73.0">
+                                       <children>
+                                          <FontIcon iconLiteral="fa-user" iconSize="30" selectionEnd="5" selectionStart="1" text="" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="60.0">
+                                             <font>
+                                                <Font size="89.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </FontIcon>
+                                          <FontIcon fill="#000000de" fontSmoothingType="LCD" iconColor="#00000089" iconLiteral="fa-circle" iconSize="40" stroke="#ffffff00" textAlignment="CENTER" />
+                                       </children>
+                                    </StackedFontIcon>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="309.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Parvez Hasan">
+                                             <font>
+                                                <Font name="Calibri Light" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hey What's up! I was wondering that ....">
+                                             <font>
+                                                <Font name="Calibri Light" size="13.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" fillHeight="false" layoutX="10.0" layoutY="250.0" prefHeight="80.0" prefWidth="382.0" style="-fx-border-color: rgba(30, 161, 201,1); -fx-border-width: 0 0 1 0;" styleClass="current-chat">
+                                 <children>
+                                    <StackedFontIcon prefHeight="78.0" prefWidth="73.0">
+                                       <children>
+                                          <FontIcon iconLiteral="fa-user" iconSize="30" selectionEnd="5" selectionStart="1" text="" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="60.0">
+                                             <font>
+                                                <Font size="89.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </FontIcon>
+                                          <FontIcon fill="#000000de" fontSmoothingType="LCD" iconColor="#00000089" iconLiteral="fa-circle" iconSize="40" stroke="#ffffff00" textAlignment="CENTER" />
+                                       </children>
+                                    </StackedFontIcon>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="309.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Parvez Hasan">
+                                             <font>
+                                                <Font name="Calibri Light" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hey What's up! I was wondering that ....">
+                                             <font>
+                                                <Font name="Calibri Light" size="13.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" fillHeight="false" layoutX="10.0" layoutY="90.0" prefHeight="80.0" prefWidth="398.0" style="-fx-border-color: rgba(30, 161, 201,1); -fx-border-width: 0 0 1 0;" styleClass="unread-chat">
+                                 <children>
+                                    <StackedFontIcon prefHeight="78.0" prefWidth="73.0">
+                                       <children>
+                                          <FontIcon iconLiteral="fa-user" iconSize="30" selectionEnd="5" selectionStart="1" text="" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="60.0">
+                                             <font>
+                                                <Font size="89.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </FontIcon>
+                                          <FontIcon fill="#000000de" fontSmoothingType="LCD" iconColor="#00000089" iconLiteral="fa-circle" iconSize="40" stroke="#ffffff00" textAlignment="CENTER" />
+                                       </children>
+                                    </StackedFontIcon>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="66.0" prefWidth="325.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text cache="true" cacheHint="QUALITY" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text" text="Parvez Hasan">
+                                             <font>
+                                                <Font name="Calibri Light" size="18.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hey What's up! I was wondering that ....">
+                                             <font>
+                                                <Font name="Calibri Light" size="13.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" fillHeight="false" layoutX="10.0" layoutY="330.0" prefHeight="80.0" prefWidth="382.0" style="-fx-border-color: rgba(30, 161, 201,1); -fx-border-width: 0 0 1 0;" styleClass="current-chat">
+                                 <children>
+                                    <StackedFontIcon prefHeight="78.0" prefWidth="73.0">
+                                       <children>
+                                          <FontIcon iconLiteral="fa-user" iconSize="30" selectionEnd="5" selectionStart="1" text="" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="60.0">
+                                             <font>
+                                                <Font size="89.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </FontIcon>
+                                          <FontIcon fill="#000000de" fontSmoothingType="LCD" iconColor="#00000089" iconLiteral="fa-circle" iconSize="40" stroke="#ffffff00" textAlignment="CENTER" />
+                                       </children>
+                                    </StackedFontIcon>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="309.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Parvez Hasan">
+                                             <font>
+                                                <Font name="Calibri Light" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hey What's up! I was wondering that ....">
+                                             <font>
+                                                <Font name="Calibri Light" size="13.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" fillHeight="false" layoutX="10.0" layoutY="490.0" prefHeight="80.0" prefWidth="382.0" style="-fx-border-color: rgba(30, 161, 201,1); -fx-border-width: 0 0 1 0;" styleClass="current-chat">
+                                 <children>
+                                    <StackedFontIcon prefHeight="78.0" prefWidth="73.0">
+                                       <children>
+                                          <FontIcon iconLiteral="fa-user" iconSize="30" selectionEnd="5" selectionStart="1" text="" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="60.0">
+                                             <font>
+                                                <Font size="89.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </FontIcon>
+                                          <FontIcon fill="#000000de" fontSmoothingType="LCD" iconColor="#00000089" iconLiteral="fa-circle" iconSize="40" stroke="#ffffff00" textAlignment="CENTER" />
+                                       </children>
+                                    </StackedFontIcon>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="309.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Parvez Hasan">
+                                             <font>
+                                                <Font name="Calibri Light" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hey What's up! I was wondering that ....">
+                                             <font>
+                                                <Font name="Calibri Light" size="13.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" fillHeight="false" layoutX="10.0" layoutY="570.0" prefHeight="80.0" prefWidth="382.0" style="-fx-border-color: rgba(30, 161, 201,1); -fx-border-width: 0 0 1 0;" styleClass="current-chat">
+                                 <children>
+                                    <StackedFontIcon prefHeight="78.0" prefWidth="73.0">
+                                       <children>
+                                          <FontIcon iconLiteral="fa-user" iconSize="30" selectionEnd="5" selectionStart="1" text="" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="60.0">
+                                             <font>
+                                                <Font size="89.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </FontIcon>
+                                          <FontIcon fill="#000000de" fontSmoothingType="LCD" iconColor="#00000089" iconLiteral="fa-circle" iconSize="40" stroke="#ffffff00" textAlignment="CENTER" />
+                                       </children>
+                                    </StackedFontIcon>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="309.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Parvez Hasan">
+                                             <font>
+                                                <Font name="Calibri Light" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hey What's up! I was wondering that ....">
+                                             <font>
+                                                <Font name="Calibri Light" size="13.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" fillHeight="false" layoutX="10.0" layoutY="650.0" prefHeight="80.0" prefWidth="382.0" style="-fx-border-color: rgba(30, 161, 201,1); -fx-border-width: 0 0 1 0;" styleClass="current-chat">
+                                 <children>
+                                    <StackedFontIcon prefHeight="78.0" prefWidth="73.0">
+                                       <children>
+                                          <FontIcon iconLiteral="fa-user" iconSize="30" selectionEnd="5" selectionStart="1" text="" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="60.0">
+                                             <font>
+                                                <Font size="89.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </FontIcon>
+                                          <FontIcon fill="#000000de" fontSmoothingType="LCD" iconColor="#00000089" iconLiteral="fa-circle" iconSize="40" stroke="#ffffff00" textAlignment="CENTER" />
+                                       </children>
+                                    </StackedFontIcon>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="309.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Parvez Hasan">
+                                             <font>
+                                                <Font name="Calibri Light" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hey What's up! I was wondering that ....">
+                                             <font>
+                                                <Font name="Calibri Light" size="13.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" fillHeight="false" layoutX="10.0" layoutY="730.0" prefHeight="80.0" prefWidth="382.0" style="-fx-border-color: rgba(30, 161, 201,1); -fx-border-width: 0 0 1 0;" styleClass="current-chat">
+                                 <children>
+                                    <StackedFontIcon prefHeight="78.0" prefWidth="73.0">
+                                       <children>
+                                          <FontIcon iconLiteral="fa-user" iconSize="30" selectionEnd="5" selectionStart="1" text="" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="60.0">
+                                             <font>
+                                                <Font size="89.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </FontIcon>
+                                          <FontIcon fill="#000000de" fontSmoothingType="LCD" iconColor="#00000089" iconLiteral="fa-circle" iconSize="40" stroke="#ffffff00" textAlignment="CENTER" />
+                                       </children>
+                                    </StackedFontIcon>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="309.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Parvez Hasan">
+                                             <font>
+                                                <Font name="Calibri Light" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hey What's up! I was wondering that ....">
+                                             <font>
+                                                <Font name="Calibri Light" size="13.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" fillHeight="false" layoutX="10.0" layoutY="810.0" prefHeight="80.0" prefWidth="382.0" style="-fx-border-color: rgba(30, 161, 201,1); -fx-border-width: 0 0 1 0;" styleClass="current-chat">
+                                 <children>
+                                    <StackedFontIcon prefHeight="78.0" prefWidth="73.0">
+                                       <children>
+                                          <FontIcon iconLiteral="fa-user" iconSize="30" selectionEnd="5" selectionStart="1" text="" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="60.0">
+                                             <font>
+                                                <Font size="89.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </FontIcon>
+                                          <FontIcon fill="#000000de" fontSmoothingType="LCD" iconColor="#00000089" iconLiteral="fa-circle" iconSize="40" stroke="#ffffff00" textAlignment="CENTER" />
+                                       </children>
+                                    </StackedFontIcon>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="309.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Parvez Hasan">
+                                             <font>
+                                                <Font name="Calibri Light" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hey What's up! I was wondering that ....">
+                                             <font>
+                                                <Font name="Calibri Light" size="13.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" fillHeight="false" layoutX="10.0" layoutY="890.0" prefHeight="80.0" prefWidth="382.0" style="-fx-border-color: rgba(30, 161, 201,1); -fx-border-width: 0 0 1 0;" styleClass="current-chat">
+                                 <children>
+                                    <StackedFontIcon prefHeight="78.0" prefWidth="73.0">
+                                       <children>
+                                          <FontIcon iconLiteral="fa-user" iconSize="30" selectionEnd="5" selectionStart="1" text="" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="60.0">
+                                             <font>
+                                                <Font size="89.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </FontIcon>
+                                          <FontIcon fill="#000000de" fontSmoothingType="LCD" iconColor="#00000089" iconLiteral="fa-circle" iconSize="40" stroke="#ffffff00" textAlignment="CENTER" />
+                                       </children>
+                                    </StackedFontIcon>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="309.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Parvez Hasan">
+                                             <font>
+                                                <Font name="Calibri Light" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hey What's up! I was wondering that ....">
+                                             <font>
+                                                <Font name="Calibri Light" size="13.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" fillHeight="false" layoutX="10.0" layoutY="970.0" prefHeight="80.0" prefWidth="382.0" style="-fx-border-color: rgba(30, 161, 201,1); -fx-border-width: 0 0 1 0;" styleClass="current-chat">
+                                 <children>
+                                    <StackedFontIcon prefHeight="78.0" prefWidth="73.0">
+                                       <children>
+                                          <FontIcon iconLiteral="fa-user" iconSize="30" selectionEnd="5" selectionStart="1" text="" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="60.0">
+                                             <font>
+                                                <Font size="89.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </FontIcon>
+                                          <FontIcon fill="#000000de" fontSmoothingType="LCD" iconColor="#00000089" iconLiteral="fa-circle" iconSize="40" stroke="#ffffff00" textAlignment="CENTER" />
+                                       </children>
+                                    </StackedFontIcon>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="309.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Parvez Hasan">
+                                             <font>
+                                                <Font name="Calibri Light" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hey What's up! I was wondering that ....">
+                                             <font>
+                                                <Font name="Calibri Light" size="13.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" fillHeight="false" layoutX="10.0" layoutY="1050.0" prefHeight="80.0" prefWidth="382.0" style="-fx-border-color: rgba(30, 161, 201,1); -fx-border-width: 0 0 1 0;" styleClass="current-chat">
+                                 <children>
+                                    <StackedFontIcon prefHeight="78.0" prefWidth="73.0">
+                                       <children>
+                                          <FontIcon iconLiteral="fa-user" iconSize="30" selectionEnd="5" selectionStart="1" text="" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="60.0">
+                                             <font>
+                                                <Font size="89.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </FontIcon>
+                                          <FontIcon fill="#000000de" fontSmoothingType="LCD" iconColor="#00000089" iconLiteral="fa-circle" iconSize="40" stroke="#ffffff00" textAlignment="CENTER" />
+                                       </children>
+                                    </StackedFontIcon>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="309.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Parvez Hasan">
+                                             <font>
+                                                <Font name="Calibri Light" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hey What's up! I was wondering that ....">
+                                             <font>
+                                                <Font name="Calibri Light" size="13.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" fillHeight="false" layoutX="10.0" layoutY="1130.0" prefHeight="80.0" prefWidth="382.0" style="-fx-border-color: rgba(30, 161, 201,1); -fx-border-width: 0 0 1 0;" styleClass="current-chat">
+                                 <children>
+                                    <StackedFontIcon prefHeight="78.0" prefWidth="73.0">
+                                       <children>
+                                          <FontIcon iconLiteral="fa-user" iconSize="30" selectionEnd="5" selectionStart="1" text="" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="60.0">
+                                             <font>
+                                                <Font size="89.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </FontIcon>
+                                          <FontIcon fill="#000000de" fontSmoothingType="LCD" iconColor="#00000089" iconLiteral="fa-circle" iconSize="40" stroke="#ffffff00" textAlignment="CENTER" />
+                                       </children>
+                                    </StackedFontIcon>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="309.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Parvez Hasan">
+                                             <font>
+                                                <Font name="Calibri Light" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hey What's up! I was wondering that ....">
+                                             <font>
+                                                <Font name="Calibri Light" size="13.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" fillHeight="false" layoutX="10.0" layoutY="1210.0" prefHeight="80.0" prefWidth="382.0" style="-fx-border-color: rgba(30, 161, 201,1); -fx-border-width: 0 0 1 0;" styleClass="current-chat">
+                                 <children>
+                                    <StackedFontIcon prefHeight="78.0" prefWidth="73.0">
+                                       <children>
+                                          <FontIcon iconLiteral="fa-user" iconSize="30" selectionEnd="5" selectionStart="1" text="" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="60.0">
+                                             <font>
+                                                <Font size="89.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </FontIcon>
+                                          <FontIcon fill="#000000de" fontSmoothingType="LCD" iconColor="#00000089" iconLiteral="fa-circle" iconSize="40" stroke="#ffffff00" textAlignment="CENTER" />
+                                       </children>
+                                    </StackedFontIcon>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="309.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Parvez Hasan">
+                                             <font>
+                                                <Font name="Calibri Light" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hey What's up! I was wondering that ....">
+                                             <font>
+                                                <Font name="Calibri Light" size="13.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" fillHeight="false" layoutX="10.0" layoutY="1290.0" prefHeight="80.0" prefWidth="382.0" style="-fx-border-color: rgba(30, 161, 201,1); -fx-border-width: 0 0 1 0;" styleClass="current-chat">
+                                 <children>
+                                    <StackedFontIcon prefHeight="78.0" prefWidth="73.0">
+                                       <children>
+                                          <FontIcon iconLiteral="fa-user" iconSize="30" selectionEnd="5" selectionStart="1" text="" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="60.0">
+                                             <font>
+                                                <Font size="89.0" />
+                                             </font>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </FontIcon>
+                                          <FontIcon fill="#000000de" fontSmoothingType="LCD" iconColor="#00000089" iconLiteral="fa-circle" iconSize="40" stroke="#ffffff00" textAlignment="CENTER" />
+                                       </children>
+                                    </StackedFontIcon>
+                                    <VBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="309.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Parvez Hasan">
+                                             <font>
+                                                <Font name="Calibri Light" size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hey What's up! I was wondering that ....">
+                                             <font>
+                                                <Font name="Calibri Light" size="13.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </VBox>
+            <VBox prefHeight="924.0" prefWidth="854.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <VBox maxHeight="194.0" minHeight="93.0" prefHeight="193.0" prefWidth="852.0" styleClass="blue-main">
+                     <children>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="276.0" prefWidth="760.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Status">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <FontIcon iconLiteral="fa-bell" iconSize="30" stroke="#000000e3" styleClass="bell" wrappingWidth="26.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </FontIcon>
+                           </children>
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding>
+                        </HBox>
+                        <VBox fillWidth="false" prefHeight="200.0" prefWidth="100.0" styleClass="header-bar">
+                           <children>
+                              <Text fx:id="UserFName" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Parvez Hasan">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Text>
+                              <HBox alignment="CENTER_LEFT" prefHeight="20.0" prefWidth="309.0">
+                                 <children>
+                                    <Text fx:id="userActiveStatus" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Active Now" />
+                                    <FontIcon fx:id="currentStatus" iconColor="#19f505" iconLiteral="fa-circle">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="2.0" />
+                                       </HBox.margin>
+                                    </FontIcon>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </VBox>
+                  <ScrollPane fx:id="messageContainer" fitToWidth="true" hbarPolicy="NEVER" prefHeight="660.0" prefWidth="760.0" vvalue="1.0" VBox.vgrow="ALWAYS">
+                     <content>
+                        <VBox fx:id="messageArea" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="10.0">
+                           <children>
+                              <HBox alignment="TOP_RIGHT" layoutX="10.0" layoutY="1130.0" prefHeight="100.0" prefWidth="200.0" styleClass="my-text">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="261.0" style="-fx-border-radius: 20; -fx-background-radius: 20;">
+                                       <children>
+                                          <Text lineSpacing="2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hey What's up! I was wondering that if i couldf come to thje worlsd if I amhfsoighausjklglksjluahthstheyrjwrjrjyjwsrjswrytjsrtjsrjrtrtrjhihgaoighjaeoirhgaoeirhgoiearhgaoierhgoierhgoaierhgoietrhloiehoieahoierhaoilearhloaiehloieheaorihe oriori  rh er ehrg hre g hareh a eraeuir earg ergsghsuhguirheauhgoiehtrgaeoiuhgauoiefhguehuihrgeuihgueairhgieuahgiuehargieuhagherghaeruigheurigheruhgeuirahaeuihgiuahruahaeruigheuirhgeuirhgaeuirghauhfgnfkghfdglkjhfdjlghaljhguhrgliuehrguihtruighuihgraakrhguighrehguorihjgoeiarhgoierhguoiehrguiehguiehgeuirgheiurhgeiurhgeiuhgiuhriguhaeiuhrfiuehsgihrgiluseghloithliutshbiuserthiushiusthiutrhiulsrthgiutgheilturhlsihglkadhlkahglaiuohrgliuahliuahtrgliuthlikaujfhlkvjahgilukhtrluaihtrjegrgailuegheruharguilrgauihgoaehrguoiaehrgea hrgehraghearhgerheharg" wrappingWidth="500.0">
+                                             <font>
+                                                <Font size="14.5" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Text>
+                                       </children>
+                                       <padding>
+                                          <Insets left="20.0" right="20.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets right="40.0" top="20.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="850.0" prefHeight="185.0" styleClass="others-text">
+                                 <children>
+                                    <VBox prefHeight="358.0" prefWidth="46.0">
+                                       <children>
+                                          <StackedFontIcon prefHeight="78.0" prefWidth="51.0">
+                                             <children>
+                                                <FontIcon iconLiteral="fa-user" iconSize="20" selectionEnd="5" selectionStart="1" text="" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="50.0">
+                                                   <font>
+                                                      <Font size="89.0" />
+                                                   </font>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </FontIcon>
+                                                <FontIcon fill="#000000de" fontSmoothingType="LCD" iconColor="#00000089" iconLiteral="fa-circle" iconSize="30" stroke="#ffffff00" textAlignment="CENTER" />
+                                             </children>
+                                          </StackedFontIcon>
+                                       </children>
+                                    </VBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="261.0" style="-fx-border-radius: 20; -fx-background-radius: 20;">
+                                       <children>
+                                          <Text lineSpacing="2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hey What's up! I was wondering that if i couldf come to thje worlsd if I amhfsoighausjklglksjluahthstheyrjwrjrjyjwsrjswrytjsrtjsrjrtrtrjhihgaoighjaeoirhgaoeirhgoiearhgaoierhgoierhgoaierhgoietrhloiehoieahoierhaoilearhloaiehloieheaorihe oriori  rh er ehrg hre g hareh a eraeuir earg ergsghsuhguirheauhgoiehtrgaeoiuhgauoiefhguehuihrgeuihgueairhgieuahgiuehargieuhagherghaeruigheurigheruhgeuirahaeuihgiuahruahaeruigheuirhgeuirhgaeuirghauhfgnfkghfdglkjhfdjlghaljhguhrgliuehrguihtruighuihgraakrhguighrehguorihjgoeiarhgoierhguoiehrguiehguiehgeuirgheiurhgeiurhgeiuhgiuhriguhaeiuhrfiuehsgihrgiluseghloithliutshbiuserthiushiusthiutrhiulsrthgiutgheilturhlsihglkadhlkahglaiuohrgliuahliuahtrgliuthlikaujfhlkvjahgilukhtrluaihtrjegrgailuegheruharguilrgauihgoaehrguoiaehrgea hrgehraghearhgerheharg" wrappingWidth="402.0">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" top="10.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="14.5" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                       <padding>
+                                          <Insets left="20.0" right="20.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets top="20.0" />
+                                       </HBox.margin>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="283.0" prefHeight="185.0" styleClass="others-text">
+                                 <children>
+                                    <VBox prefHeight="358.0" prefWidth="46.0">
+                                       <children>
+                                          <StackedFontIcon prefHeight="78.0" prefWidth="51.0">
+                                             <children>
+                                                <FontIcon iconLiteral="fa-user" iconSize="20" selectionEnd="5" selectionStart="1" text="" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="50.0">
+                                                   <font>
+                                                      <Font size="89.0" />
+                                                   </font>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </FontIcon>
+                                                <FontIcon fill="#000000de" fontSmoothingType="LCD" iconColor="#00000089" iconLiteral="fa-circle" iconSize="30" stroke="#ffffff00" textAlignment="CENTER" />
+                                             </children>
+                                          </StackedFontIcon>
+                                       </children>
+                                    </VBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="261.0" style="-fx-border-radius: 20; -fx-background-radius: 20;">
+                                       <children>
+                                          <Text lineSpacing="2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hey What's up! I was wondering that if i couldf come to thje worlsd if I amhfsoighausjklglksjluahthstheyrjwrjrjyjwsrjswrytjsrtjsrjrtrtrjhihgaoighjaeoirhgaoeirhgoiearhgaoierhgoierhgoaierhgoietrhloiehoieahoierhaoilearhloaiehloieheaorihe oriori  rh er ehrg hre g hareh a eraeuir earg ergsghsuhguirheauhgoiehtrgaeoiuhgauoiefhguehuihrgeuihgueairhgieuahgiuehargieuhagherghaeruigheurigheruhgeuirahaeuihgiuahruahaeruigheuirhgeuirhgaeuirghauhfgnfkghfdglkjhfdjlghaljhguhrgliuehrguihtruighuihgraakrhguighrehguorihjgoeiarhgoierhguoiehrguiehguiehgeuirgheiurhgeiurhgeiuhgiuhriguhaeiuhrfiuehsgihrgiluseghloithliutshbiuserthiushiusthiutrhiulsrthgiutgheilturhlsihglkadhlkahglaiuohrgliuahliuahtrgliuthlikaujfhlkvjahgilukhtrluaihtrjegrgailuegheruharguilrgauihgoaehrguoiaehrgea hrgehraghearhgerheharg" wrappingWidth="402.0">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" top="10.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="14.5" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                       <padding>
+                                          <Insets left="20.0" right="20.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets top="20.0" />
+                                       </HBox.margin>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="641.0" prefHeight="185.0" styleClass="others-text">
+                                 <children>
+                                    <VBox prefHeight="358.0" prefWidth="46.0">
+                                       <children>
+                                          <StackedFontIcon prefHeight="78.0" prefWidth="51.0">
+                                             <children>
+                                                <FontIcon iconLiteral="fa-user" iconSize="20" selectionEnd="5" selectionStart="1" text="" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="50.0">
+                                                   <font>
+                                                      <Font size="89.0" />
+                                                   </font>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </FontIcon>
+                                                <FontIcon fill="#000000de" fontSmoothingType="LCD" iconColor="#00000089" iconLiteral="fa-circle" iconSize="30" stroke="#ffffff00" textAlignment="CENTER" />
+                                             </children>
+                                          </StackedFontIcon>
+                                       </children>
+                                    </VBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="261.0" style="-fx-border-radius: 20; -fx-background-radius: 20;">
+                                       <children>
+                                          <Text lineSpacing="2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hey What's up! I was wondering that if i couldf come to thje worlsd if I amhfsoighausjklglksjluahthstheyrjwrjrjyjwsrjswrytjsrtjsrjrtrtrjhihgaoighjaeoirhgaoeirhgoiearhgaoierhgoierhgoaierhgoietrhloiehoieahoierhaoilearhloaiehloieheaorihe oriori  rh er ehrg hre g hareh a eraeuir earg ergsghsuhguirheauhgoiehtrgaeoiuhgauoiefhguehuihrgeuihgueairhgieuahgiuehargieuhagherghaeruigheurigheruhgeuirahaeuihgiuahruahaeruigheuirhgeuirhgaeuirghauhfgnfkghfdglkjhfdjlghaljhguhrgliuehrguihtruighuihgraakrhguighrehguorihjgoeiarhgoierhguoiehrguiehguiehgeuirgheiurhgeiurhgeiuhgiuhriguhaeiuhrfiuehsgihrgiluseghloithliutshbiuserthiushiusthiutrhiulsrthgiutgheilturhlsihglkadhlkahglaiuohrgliuahliuahtrgliuthlikaujfhlkvjahgilukhtrluaihtrjegrgailuegheruharguilrgauihgoaehrguoiaehrgea hrgehraghearhgerheharg" wrappingWidth="402.0">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" top="10.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="14.5" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                       <padding>
+                                          <Insets left="20.0" right="20.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets top="20.0" />
+                                       </HBox.margin>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="TOP_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" styleClass="my-text">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="261.0" style="-fx-border-radius: 20; -fx-background-radius: 20;">
+                                       <children>
+                                          <Text lineSpacing="2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hey What's up! I was wondering that if i couldf come to thje worlsd if I amhfsoighausjklglksjluahthstheyrjwrjrjyjwsrjswrytjsrtjsrjrtrtrjhihgaoighjaeoirhgaoeirhgoiearhgaoierhgoierhgoaierhgoietrhloiehoieahoierhaoilearhloaiehloieheaorihe oriori  rh er ehrg hre g hareh a eraeuir earg ergsghsuhguirheauhgoiehtrgaeoiuhgauoiefhguehuihrgeuihgueairhgieuahgiuehargieuhagherghaeruigheurigheruhgeuirahaeuihgiuahruahaeruigheuirhgeuirhgaeuirghauhfgnfkghfdglkjhfdjlghaljhguhrgliuehrguihtruighuihgraakrhguighrehguorihjgoeiarhgoierhguoiehrguiehguiehgeuirgheiurhgeiurhgeiuhgiuhriguhaeiuhrfiuehsgihrgiluseghloithliutshbiuserthiushiusthiutrhiulsrthgiutgheilturhlsihglkadhlkahglaiuohrgliuahliuahtrgliuthlikaujfhlkvjahgilukhtrluaihtrjegrgailuegheruharguilrgauihgoaehrguoiaehrgea hrgehraghearhgerheharg" wrappingWidth="500.0">
+                                             <font>
+                                                <Font size="14.5" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Text>
+                                       </children>
+                                       <padding>
+                                          <Insets left="20.0" right="20.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets right="40.0" top="20.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="TOP_RIGHT" layoutX="10.0" layoutY="1357.0" prefHeight="100.0" prefWidth="200.0" styleClass="my-text">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="261.0" style="-fx-border-radius: 20; -fx-background-radius: 20;">
+                                       <children>
+                                          <Text lineSpacing="2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hey What's up! I was wondering that if i couldf come to thje worlsd if I amhfsoighausjklglksjluahthstheyrjwrjrjyjwsrjswrytjsrtjsrjrtrtrjhihgaoighjaeoirhgaoeirhgoiearhgaoierhgoierhgoaierhgoietrhloiehoieahoierhaoilearhloaiehloieheaorihe oriori  rh er ehrg hre g hareh a eraeuir earg ergsghsuhguirheauhgoiehtrgaeoiuhgauoiefhguehuihrgeuihgueairhgieuahgiuehargieuhagherghaeruigheurigheruhgeuirahaeuihgiuahruahaeruigheuirhgeuirhgaeuirghauhfgnfkghfdglkjhfdjlghaljhguhrgliuehrguihtruighuihgraakrhguighrehguorihjgoeiarhgoierhguoiehrguiehguiehgeuirgheiurhgeiurhgeiuhgiuhriguhaeiuhrfiuehsgihrgiluseghloithliutshbiuserthiushiusthiutrhiulsrthgiutgheilturhlsihglkadhlkahglaiuohrgliuahliuahtrgliuthlikaujfhlkvjahgilukhtrluaihtrjegrgailuegheruharguilrgauihgoaehrguoiaehrgea hrgehraghearhgerheharg" wrappingWidth="500.0">
+                                             <font>
+                                                <Font size="14.5" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Text>
+                                       </children>
+                                       <padding>
+                                          <Insets left="20.0" right="20.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets right="40.0" top="20.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="TOP_RIGHT" layoutX="10.0" layoutY="1357.0" prefHeight="100.0" prefWidth="200.0" styleClass="my-text">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="261.0" style="-fx-border-radius: 20; -fx-background-radius: 20;">
+                                       <children>
+                                          <Text lineSpacing="2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hey What's up! I was wondering that if i couldf come to thje worlsd if I amhfsoighausjklglksjluahthstheyrjwrjrjyjwsrjswrytjsrtjsrjrtrtrjhihgaoighjaeoirhgaoeirhgoiearhgaoierhgoierhgoaierhgoietrhloiehoieahoierhaoilearhloaiehloieheaorihe oriori  rh er ehrg hre g hareh a eraeuir earg ergsghsuhguirheauhgoiehtrgaeoiuhgauoiefhguehuihrgeuihgueairhgieuahgiuehargieuhagherghaeruigheurigheruhgeuirahaeuihgiuahruahaeruigheuirhgeuirhgaeuirghauhfgnfkghfdglkjhfdjlghaljhguhrgliuehrguihtruighuihgraakrhguighrehguorihjgoeiarhgoierhguoiehrguiehguiehgeuirgheiurhgeiurhgeiuhgiuhriguhaeiuhrfiuehsgihrgiluseghloithliutshbiuserthiushiusthiutrhiulsrthgiutgheilturhlsihglkadhlkahglaiuohrgliuahliuahtrgliuthlikaujfhlkvjahgilukhtrluaihtrjegrgailuegheruharguilrgauihgoaehrguoiaehrgea hrgehraghearhgerheharg" wrappingWidth="500.0">
+                                             <font>
+                                                <Font size="14.5" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Text>
+                                       </children>
+                                       <padding>
+                                          <Insets left="20.0" right="20.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets right="40.0" top="20.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="TOP_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" styleClass="my-text">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="243.0" prefWidth="440.0" style="-fx-border-radius: 20; -fx-background-radius: 20;">
+                                       <children>
+                                          <Text lineSpacing="2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hey What's up! I was wondering that if i couldf come to thje worlsd if I amhfsoighausjklglksjluahthstheyrjwrjrjyjwsrjswrytjsrtjsrjrtrtrjhihgaoighjaeoirhgaoeirhgoiearhgaoierhgoierhgoaierhgoietrhloiehoieahoierhaoilearhloaiehloieheaorihe oriori  rh er ehrg hre g hareh a eraeuir earg ergsghsuhguirheauhgoiehtrgaeoiuhgauoiefhguehuihrgeuihgueairhgieuahgiuehargieuhagherghaeruigheurigheruhgeuirahaeuihgiuahruahaeruigheuirhgeuirhgaeuirghauhfgnfkghfdglkjhfdjlghaljhguhrgliuehrguihtruighuihgraakrhguighrehguorihjgoeiarhgoierhguoiehrguiehguiehgeuirgheiurhgeiurhgeiuhgiuhriguhaeiuhrfiuehsgihrgiluseghloithliutshbiuserthiushiusthiutrhiulsrthgiutgheilturhlsihglkadhlkahglaiuohrgliuahliuahtrgliuthlikaujfhlkvjahgilukhtrluaihtrjegrgailuegheruharguilrgauihgoaehrguoiaehrgea hrgehraghearhgerheharg" wrappingWidth="400.0">
+                                             <font>
+                                                <Font size="14.5" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" top="10.0" />
+                                             </HBox.margin>
+                                          </Text>
+                                       </children>
+                                       <padding>
+                                          <Insets left="20.0" right="20.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets right="40.0" top="20.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="641.0" prefHeight="185.0" styleClass="others-text">
+                                 <children>
+                                    <VBox prefHeight="358.0" prefWidth="46.0">
+                                       <children>
+                                          <StackedFontIcon prefHeight="78.0" prefWidth="51.0">
+                                             <children>
+                                                <FontIcon iconLiteral="fa-user" iconSize="20" selectionEnd="5" selectionStart="1" text="" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="50.0">
+                                                   <font>
+                                                      <Font size="89.0" />
+                                                   </font>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </FontIcon>
+                                                <FontIcon fill="#000000de" fontSmoothingType="LCD" iconColor="#00000089" iconLiteral="fa-circle" iconSize="30" stroke="#ffffff00" textAlignment="CENTER" />
+                                             </children>
+                                          </StackedFontIcon>
+                                       </children>
+                                    </VBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="261.0" style="-fx-border-radius: 20; -fx-background-radius: 20;">
+                                       <children>
+                                          <Text lineSpacing="2.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hey What's up! I was wondering that if i couldf come to thje worlsd if I amhfsoighausjklglksjluahthstheyrjwrjrjyjwsrjswrytjsrtjsrjrtrtrjhihgaoighjaeoirhgaoeirhgoiearhgaoierhgoierhgoaierhgoietrhloiehoieahoierhaoilearhloaiehloieheaorihe oriori  rh er ehrg hre g hareh a eraeuir earg ergsghsuhguirheauhgoiehtrgaeoiuhgauoiefhguehuihrgeuihgueairhgieuahgiuehargieuhagherghaeruigheurigheruhgeuirahaeuihgiuahruahaeruigheuirhgeuirhgaeuirghauhfgnfkghfdglkjhfdjlghaljhguhrgliuehrguihtruighuihgraakrhguighrehguorihjgoeiarhgoierhguoiehrguiehguiehgeuirgheiurhgeiurhgeiuhgiuhriguhaeiuhrfiuehsgihrgiluseghloithliutshbiuserthiushiusthiutrhiulsrthgiutgheilturhlsihglkadhlkahglaiuohrgliuahliuahtrgliuthlikaujfhlkvjahgilukhtrluaihtrjegrgailuegheruharguilrgauihgoaehrguoiaehrgea hrgehraghearhgerheharg" wrappingWidth="400.0">
+                                             <HBox.margin>
+                                                <Insets bottom="10.0" top="10.0" />
+                                             </HBox.margin>
+                                             <font>
+                                                <Font size="14.5" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                       <padding>
+                                          <Insets left="20.0" right="20.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets top="20.0" />
+                                       </HBox.margin>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="20.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+                  <HBox fx:id="imageContainer" />
+                  <HBox fx:id="chatBox" alignment="CENTER_RIGHT" prefHeight="65.0" prefWidth="803.0" styleClass="blue-main">
+                     <children>
+                        <HBox fx:id="iconPanel" alignment="CENTER_LEFT" cacheShape="false" centerShape="false" fillHeight="false" focusTraversable="true" maxWidth="237.0" prefHeight="55.0" prefWidth="237.0" scaleShape="false" HBox.hgrow="NEVER">
+                           <children>
+                              <FontIcon iconColor="WHITE" iconLiteral="fa-microphone" iconSize="20">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </FontIcon>
+                              <FontIcon iconColor="WHITE" iconLiteral="fa-camera" iconSize="20">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </FontIcon>
+                              <FontIcon iconColor="WHITE" iconLiteral="fa-file" iconSize="20" tabSize="10">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </FontIcon>
+                              <FontIcon iconColor="WHITE" iconLiteral="fa-image" iconSize="20" onMouseClicked="#UploadImageActionPerformed" selectionEnd="0" tabSize="20">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </FontIcon>
+                           </children>
+                        </HBox>
+                        <TextArea fx:id="chatArea" prefHeight="45.0" prefRowCount="0" prefWidth="689.0" promptText="Enter your message" scaleShape="false" style="-fx-background-radius: 20; -fx-background-color: white;" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="20.0" top="5.0" />
+                           </HBox.margin>
+                        </TextArea>
+                        <FontIcon iconLiteral="fa-paper-plane" iconSize="30" onMouseClicked="#sendMessage" stroke="#ffffff4f" styleClass="send-button" tabSize="20" textAlignment="CENTER" wrappingWidth="83.4285717010498">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </FontIcon>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <FontIcon iconLiteral="fa-close" layoutX="10.0" layoutY="10.0" onMouseClicked="#onExit" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontIcon>
+   </children>
+</AnchorPane>

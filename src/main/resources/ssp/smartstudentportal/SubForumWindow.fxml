@@ -1,0 +1,1343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<?import org.kordamp.ikonli.javafx.StackedFontIcon?>
+
+<AnchorPane prefHeight="700.0" prefWidth="833.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0" styleClass="bg-forum" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="63.0" prefWidth="600.0" style="-fx-border-style: hidden none solid none; -fx-border-color: #25abc6; -fx-background-color: #25abc6;">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <FontIcon iconColor="WHITE" iconLiteral="fa-arrow-left" iconSize="14" onMouseClicked="#goBack">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </FontIcon>
+                     </children>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding></HBox>
+                  <HBox alignment="CENTER_RIGHT" layoutX="11.0" layoutY="11.0" prefHeight="61.0" prefWidth="16.0">
+                     <children>
+                        <FontIcon fx:id="followButton" iconLiteral="far-star" iconSize="14" onMouseClicked="#goBack">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </FontIcon>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <TextField fx:id="searchPost" prefHeight="25.0" prefWidth="355.0" promptText="Search the forum" style="-fx-background-radius: 20px; -fx-border-radius: 20px;">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <FontIcon iconColor="WHITE" iconLiteral="fa-search" iconSize="25">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </FontIcon>
+                        <FontIcon iconColor="WHITE" iconLiteral="fa-refresh" iconSize="25" layoutX="433.0" layoutY="65.0" onMouseClicked="#getPosts">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </FontIcon>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" fillHeight="false" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <FontIcon iconColor="WHITE" iconLiteral="fas-diagnoses" iconSize="25">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </FontIcon>
+                        <FontIcon iconColor="WHITE" iconLiteral="fas-envelope" iconSize="25" layoutX="99.0" layoutY="67.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </FontIcon>
+                        <HBox alignment="CENTER" fillHeight="false">
+                           <children>
+                              <StackedFontIcon prefHeight="100.0" prefWidth="28.0">
+                                 <children>
+                                    <FontIcon fill="#000000de" fontSmoothingType="LCD" iconColor="WHITE" iconLiteral="fa-circle" iconSize="35" stroke="#ffffff00" textAlignment="CENTER" wrappingWidth="35.0" />
+                                    <FontIcon iconColor="#25abc6" iconLiteral="fa-user" iconSize="25" selectionEnd="5" selectionStart="1" text="" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="27.0">
+                                       <font>
+                                          <Font size="89.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </FontIcon>
+                                 </children>
+                              </StackedFontIcon>
+                              <StackedFontIcon alignment="TOP_CENTER" prefHeight="28.0" prefWidth="16.0">
+                                 <children>
+                                    <FontIcon iconColor="WHITE" iconLiteral="fas-chevron-down" iconSize="15">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </FontIcon>
+                                 </children>
+                              </StackedFontIcon>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <ScrollPane fitToWidth="true" hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;" VBox.vgrow="ALWAYS">
+               <content>
+                  <VBox alignment="TOP_CENTER" spacing="20.0">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <HBox alignment="TOP_CENTER" maxWidth="665.0" prefHeight="56.0" prefWidth="713.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+                           <children>
+                              <VBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add  a new thread" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" onMouseClicked="#showCreatePostWindow" prefHeight="36.0" prefWidth="36.0" style="-fx-background-color: #25abc6; -fx-background-radius: 12;">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="10.0" top="10.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <FontIcon iconColor="WHITE" iconLiteral="fas-plus" iconSize="20" scaleX="0.7" scaleY="0.7" />
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets left="20.0" right="20.0" />
+                           </padding>
+                        </HBox>
+                        <VBox fx:id="postContainer" alignment="TOP_CENTER" fillWidth="false" spacing="20.0">
+                           <children>
+                              <VBox prefHeight="441.0" prefWidth="665.0" spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="625.0">
+                                       <children>
+                                          <Label text="Lecture Rescheduling">
+                                             <font>
+                                                <Font name="System Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="59.0" prefWidth="625.0">
+                                       <children>
+                                          <FontIcon iconColor="#25abc6" iconLiteral="fas-user" iconSize="30" textAlignment="CENTER" wrappingWidth="41.25">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </FontIcon>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="466.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label text="Sadia Ahmmed">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Label>
+                                                <Label text="6h ago" />
+                                             </children>
+                                          </VBox>
+                                          <Label alignment="CENTER" prefHeight="35.0" prefWidth="135.0" style="-fx-background-color: rgba(140,140,140,0.1); -fx-background-radius: 10;" text="Accounting" textAlignment="CENTER" textFill="#3e0b65">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="70.0" prefWidth="625.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hi mates, So I talked with Dr Hellen and because of her liner we need to reschedule upcoming. There seems to be something going on here i need a place to live with my dead ass. I think there are many things with holes in them." wrappingWidth="625.0">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="49.0" prefWidth="625.0">
+                                       <children>
+                                          <VBox alignment="CENTER" fillWidth="false" prefHeight="32.0" prefWidth="46.0" style="-fx-background-color: rgba(20,20,20,0.1); -fx-background-radius: 10;">
+                                             <children>
+                                                <FontIcon iconColor="#00000060" iconLiteral="fa-bookmark" iconSize="20">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </FontIcon>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </VBox>
+                                          <HBox alignment="CENTER" fillHeight="false" prefHeight="39.0" prefWidth="127.0" spacing="10.0" style="-fx-background-color: rgba(20,20,20,0.1); -fx-background-radius: 10;">
+                                             <children>
+                                                <FontIcon iconColor="#00000068" iconLiteral="fa-comment" iconSize="20" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add Response" wrappingWidth="75.94921875">
+                                                   <HBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </Text>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                    <VBox prefHeight="91.0" prefWidth="625.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Comments">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <HBox alignment="CENTER" prefHeight="64.0" prefWidth="625.0" spacing="10.0">
+                                             <children>
+                                                <FontIcon iconColor="#25abc6" iconLiteral="fas-user" iconSize="30" textAlignment="CENTER" wrappingWidth="41.25">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </FontIcon>
+                                                <TextArea prefHeight="65.0" prefWidth="523.0" promptText="Write your comment here" style="-fx-background-color: rgba(20,20,20,0.1); -fx-background-radius: 20;" HBox.hgrow="ALWAYS">
+                                                   <HBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </TextArea>
+                                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                                   <children>
+                                                      <FontIcon iconColor="#25abc6" iconLiteral="fas-chevron-circle-right" iconSize="30">
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                      </FontIcon>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox layoutX="73.0" layoutY="10.0" prefHeight="441.0" prefWidth="665.0" spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="625.0">
+                                       <children>
+                                          <Label text="Lecture Rescheduling">
+                                             <font>
+                                                <Font name="System Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="59.0" prefWidth="625.0">
+                                       <children>
+                                          <FontIcon iconColor="#25abc6" iconLiteral="fas-user" iconSize="30" textAlignment="CENTER" wrappingWidth="41.25">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </FontIcon>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="466.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label text="Sadia Ahmmed">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Label>
+                                                <Label text="6h ago" />
+                                             </children>
+                                          </VBox>
+                                          <Label alignment="CENTER" prefHeight="35.0" prefWidth="135.0" style="-fx-background-color: rgba(140,140,140,0.1); -fx-background-radius: 10;" text="Accounting" textAlignment="CENTER" textFill="#3e0b65">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="70.0" prefWidth="625.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hi mates, So I talked with Dr Hellen and because of her liner we need to reschedule upcoming. There seems to be something going on here i need a place to live with my dead ass. I think there are many things with holes in them." wrappingWidth="625.0">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="49.0" prefWidth="625.0">
+                                       <children>
+                                          <VBox alignment="CENTER" fillWidth="false" prefHeight="32.0" prefWidth="46.0" style="-fx-background-color: rgba(20,20,20,0.1); -fx-background-radius: 10;">
+                                             <children>
+                                                <FontIcon iconColor="#00000060" iconLiteral="fa-bookmark" iconSize="20">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </FontIcon>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </VBox>
+                                          <HBox alignment="CENTER" fillHeight="false" prefHeight="39.0" prefWidth="127.0" spacing="10.0" style="-fx-background-color: rgba(20,20,20,0.1); -fx-background-radius: 10;">
+                                             <children>
+                                                <FontIcon iconColor="#00000068" iconLiteral="fa-comment" iconSize="20" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add Response" wrappingWidth="75.94921875">
+                                                   <HBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </Text>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                    <VBox prefHeight="91.0" prefWidth="625.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Comments">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <HBox alignment="CENTER" prefHeight="64.0" prefWidth="625.0" spacing="10.0">
+                                             <children>
+                                                <FontIcon iconColor="#25abc6" iconLiteral="fas-user" iconSize="30" textAlignment="CENTER" wrappingWidth="41.25">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </FontIcon>
+                                                <TextArea prefHeight="65.0" prefWidth="523.0" promptText="Write your comment here" style="-fx-background-color: rgba(20,20,20,0.1); -fx-background-radius: 20;" HBox.hgrow="ALWAYS">
+                                                   <HBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </TextArea>
+                                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                                   <children>
+                                                      <FontIcon iconColor="#25abc6" iconLiteral="fas-chevron-circle-right" iconSize="30">
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                      </FontIcon>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox layoutX="65.0" layoutY="471.0" prefHeight="441.0" prefWidth="665.0" spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="625.0">
+                                       <children>
+                                          <Label text="Lecture Rescheduling">
+                                             <font>
+                                                <Font name="System Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="59.0" prefWidth="625.0">
+                                       <children>
+                                          <FontIcon iconColor="#25abc6" iconLiteral="fas-user" iconSize="30" textAlignment="CENTER" wrappingWidth="41.25">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </FontIcon>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="466.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label text="Sadia Ahmmed">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Label>
+                                                <Label text="6h ago" />
+                                             </children>
+                                          </VBox>
+                                          <Label alignment="CENTER" prefHeight="35.0" prefWidth="135.0" style="-fx-background-color: rgba(140,140,140,0.1); -fx-background-radius: 10;" text="Accounting" textAlignment="CENTER" textFill="#3e0b65">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="70.0" prefWidth="625.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hi mates, So I talked with Dr Hellen and because of her liner we need to reschedule upcoming. There seems to be something going on here i need a place to live with my dead ass. I think there are many things with holes in them." wrappingWidth="625.0">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="49.0" prefWidth="625.0">
+                                       <children>
+                                          <VBox alignment="CENTER" fillWidth="false" prefHeight="32.0" prefWidth="46.0" style="-fx-background-color: rgba(20,20,20,0.1); -fx-background-radius: 10;">
+                                             <children>
+                                                <FontIcon iconColor="#00000060" iconLiteral="fa-bookmark" iconSize="20">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </FontIcon>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </VBox>
+                                          <HBox alignment="CENTER" fillHeight="false" prefHeight="39.0" prefWidth="127.0" spacing="10.0" style="-fx-background-color: rgba(20,20,20,0.1); -fx-background-radius: 10;">
+                                             <children>
+                                                <FontIcon iconColor="#00000068" iconLiteral="fa-comment" iconSize="20" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add Response" wrappingWidth="75.94921875">
+                                                   <HBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </Text>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                    <VBox prefHeight="91.0" prefWidth="625.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Comments">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <HBox alignment="CENTER" prefHeight="64.0" prefWidth="625.0" spacing="10.0">
+                                             <children>
+                                                <FontIcon iconColor="#25abc6" iconLiteral="fas-user" iconSize="30" textAlignment="CENTER" wrappingWidth="41.25">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </FontIcon>
+                                                <TextArea prefHeight="65.0" prefWidth="523.0" promptText="Write your comment here" style="-fx-background-color: rgba(20,20,20,0.1); -fx-background-radius: 20;" HBox.hgrow="ALWAYS">
+                                                   <HBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </TextArea>
+                                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                                   <children>
+                                                      <FontIcon iconColor="#25abc6" iconLiteral="fas-chevron-circle-right" iconSize="30">
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                      </FontIcon>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox layoutX="65.0" layoutY="932.0" prefHeight="441.0" prefWidth="665.0" spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="625.0">
+                                       <children>
+                                          <Label text="Lecture Rescheduling">
+                                             <font>
+                                                <Font name="System Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="59.0" prefWidth="625.0">
+                                       <children>
+                                          <FontIcon iconColor="#25abc6" iconLiteral="fas-user" iconSize="30" textAlignment="CENTER" wrappingWidth="41.25">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </FontIcon>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="466.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label text="Sadia Ahmmed">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Label>
+                                                <Label text="6h ago" />
+                                             </children>
+                                          </VBox>
+                                          <Label alignment="CENTER" prefHeight="35.0" prefWidth="135.0" style="-fx-background-color: rgba(140,140,140,0.1); -fx-background-radius: 10;" text="Accounting" textAlignment="CENTER" textFill="#3e0b65">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="70.0" prefWidth="625.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hi mates, So I talked with Dr Hellen and because of her liner we need to reschedule upcoming. There seems to be something going on here i need a place to live with my dead ass. I think there are many things with holes in them." wrappingWidth="625.0">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="49.0" prefWidth="625.0">
+                                       <children>
+                                          <VBox alignment="CENTER" fillWidth="false" prefHeight="32.0" prefWidth="46.0" style="-fx-background-color: rgba(20,20,20,0.1); -fx-background-radius: 10;">
+                                             <children>
+                                                <FontIcon iconColor="#00000060" iconLiteral="fa-bookmark" iconSize="20">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </FontIcon>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </VBox>
+                                          <HBox alignment="CENTER" fillHeight="false" prefHeight="39.0" prefWidth="127.0" spacing="10.0" style="-fx-background-color: rgba(20,20,20,0.1); -fx-background-radius: 10;">
+                                             <children>
+                                                <FontIcon iconColor="#00000068" iconLiteral="fa-comment" iconSize="20" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add Response" wrappingWidth="75.94921875">
+                                                   <HBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </Text>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                    <VBox prefHeight="91.0" prefWidth="625.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Comments">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <HBox alignment="CENTER" prefHeight="64.0" prefWidth="625.0" spacing="10.0">
+                                             <children>
+                                                <FontIcon iconColor="#25abc6" iconLiteral="fas-user" iconSize="30" textAlignment="CENTER" wrappingWidth="41.25">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </FontIcon>
+                                                <TextArea prefHeight="65.0" prefWidth="523.0" promptText="Write your comment here" style="-fx-background-color: rgba(20,20,20,0.1); -fx-background-radius: 20;" HBox.hgrow="ALWAYS">
+                                                   <HBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </TextArea>
+                                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                                   <children>
+                                                      <FontIcon iconColor="#25abc6" iconLiteral="fas-chevron-circle-right" iconSize="30">
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                      </FontIcon>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox layoutX="65.0" layoutY="1393.0" prefHeight="441.0" prefWidth="665.0" spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="625.0">
+                                       <children>
+                                          <Label text="Lecture Rescheduling">
+                                             <font>
+                                                <Font name="System Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="59.0" prefWidth="625.0">
+                                       <children>
+                                          <FontIcon iconColor="#25abc6" iconLiteral="fas-user" iconSize="30" textAlignment="CENTER" wrappingWidth="41.25">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </FontIcon>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="466.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label text="Sadia Ahmmed">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Label>
+                                                <Label text="6h ago" />
+                                             </children>
+                                          </VBox>
+                                          <Label alignment="CENTER" prefHeight="35.0" prefWidth="135.0" style="-fx-background-color: rgba(140,140,140,0.1); -fx-background-radius: 10;" text="Accounting" textAlignment="CENTER" textFill="#3e0b65">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="70.0" prefWidth="625.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hi mates, So I talked with Dr Hellen and because of her liner we need to reschedule upcoming. There seems to be something going on here i need a place to live with my dead ass. I think there are many things with holes in them." wrappingWidth="625.0">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="49.0" prefWidth="625.0">
+                                       <children>
+                                          <VBox alignment="CENTER" fillWidth="false" prefHeight="32.0" prefWidth="46.0" style="-fx-background-color: rgba(20,20,20,0.1); -fx-background-radius: 10;">
+                                             <children>
+                                                <FontIcon iconColor="#00000060" iconLiteral="fa-bookmark" iconSize="20">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </FontIcon>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </VBox>
+                                          <HBox alignment="CENTER" fillHeight="false" prefHeight="39.0" prefWidth="127.0" spacing="10.0" style="-fx-background-color: rgba(20,20,20,0.1); -fx-background-radius: 10;">
+                                             <children>
+                                                <FontIcon iconColor="#00000068" iconLiteral="fa-comment" iconSize="20" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add Response" wrappingWidth="75.94921875">
+                                                   <HBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </Text>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                    <VBox prefHeight="91.0" prefWidth="625.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Comments">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <HBox alignment="CENTER" prefHeight="64.0" prefWidth="625.0" spacing="10.0">
+                                             <children>
+                                                <FontIcon iconColor="#25abc6" iconLiteral="fas-user" iconSize="30" textAlignment="CENTER" wrappingWidth="41.25">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </FontIcon>
+                                                <TextArea prefHeight="65.0" prefWidth="523.0" promptText="Write your comment here" style="-fx-background-color: rgba(20,20,20,0.1); -fx-background-radius: 20;" HBox.hgrow="ALWAYS">
+                                                   <HBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </TextArea>
+                                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                                   <children>
+                                                      <FontIcon iconColor="#25abc6" iconLiteral="fas-chevron-circle-right" iconSize="30">
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                      </FontIcon>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox layoutX="65.0" layoutY="1854.0" prefHeight="441.0" prefWidth="665.0" spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="625.0">
+                                       <children>
+                                          <Label text="Lecture Rescheduling">
+                                             <font>
+                                                <Font name="System Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="59.0" prefWidth="625.0">
+                                       <children>
+                                          <FontIcon iconColor="#25abc6" iconLiteral="fas-user" iconSize="30" textAlignment="CENTER" wrappingWidth="41.25">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </FontIcon>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="466.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label text="Sadia Ahmmed">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Label>
+                                                <Label text="6h ago" />
+                                             </children>
+                                          </VBox>
+                                          <Label alignment="CENTER" prefHeight="35.0" prefWidth="135.0" style="-fx-background-color: rgba(140,140,140,0.1); -fx-background-radius: 10;" text="Accounting" textAlignment="CENTER" textFill="#3e0b65">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="70.0" prefWidth="625.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hi mates, So I talked with Dr Hellen and because of her liner we need to reschedule upcoming. There seems to be something going on here i need a place to live with my dead ass. I think there are many things with holes in them." wrappingWidth="625.0">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="49.0" prefWidth="625.0">
+                                       <children>
+                                          <VBox alignment="CENTER" fillWidth="false" prefHeight="32.0" prefWidth="46.0" style="-fx-background-color: rgba(20,20,20,0.1); -fx-background-radius: 10;">
+                                             <children>
+                                                <FontIcon iconColor="#00000060" iconLiteral="fa-bookmark" iconSize="20">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </FontIcon>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </VBox>
+                                          <HBox alignment="CENTER" fillHeight="false" prefHeight="39.0" prefWidth="127.0" spacing="10.0" style="-fx-background-color: rgba(20,20,20,0.1); -fx-background-radius: 10;">
+                                             <children>
+                                                <FontIcon iconColor="#00000068" iconLiteral="fa-comment" iconSize="20" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add Response" wrappingWidth="75.94921875">
+                                                   <HBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </Text>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                    <VBox prefHeight="91.0" prefWidth="625.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Comments">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <HBox alignment="CENTER" prefHeight="64.0" prefWidth="625.0" spacing="10.0">
+                                             <children>
+                                                <FontIcon iconColor="#25abc6" iconLiteral="fas-user" iconSize="30" textAlignment="CENTER" wrappingWidth="41.25">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </FontIcon>
+                                                <TextArea prefHeight="65.0" prefWidth="523.0" promptText="Write your comment here" style="-fx-background-color: rgba(20,20,20,0.1); -fx-background-radius: 20;" HBox.hgrow="ALWAYS">
+                                                   <HBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </TextArea>
+                                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                                   <children>
+                                                      <FontIcon iconColor="#25abc6" iconLiteral="fas-chevron-circle-right" iconSize="30">
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                      </FontIcon>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox layoutX="65.0" layoutY="2315.0" prefHeight="441.0" prefWidth="665.0" spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="625.0">
+                                       <children>
+                                          <Label text="Lecture Rescheduling">
+                                             <font>
+                                                <Font name="System Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="59.0" prefWidth="625.0">
+                                       <children>
+                                          <FontIcon iconColor="#25abc6" iconLiteral="fas-user" iconSize="30" textAlignment="CENTER" wrappingWidth="41.25">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </FontIcon>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="466.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label text="Sadia Ahmmed">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Label>
+                                                <Label text="6h ago" />
+                                             </children>
+                                          </VBox>
+                                          <Label alignment="CENTER" prefHeight="35.0" prefWidth="135.0" style="-fx-background-color: rgba(140,140,140,0.1); -fx-background-radius: 10;" text="Accounting" textAlignment="CENTER" textFill="#3e0b65">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="70.0" prefWidth="625.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hi mates, So I talked with Dr Hellen and because of her liner we need to reschedule upcoming. There seems to be something going on here i need a place to live with my dead ass. I think there are many things with holes in them." wrappingWidth="625.0">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="49.0" prefWidth="625.0">
+                                       <children>
+                                          <VBox alignment="CENTER" fillWidth="false" prefHeight="32.0" prefWidth="46.0" style="-fx-background-color: rgba(20,20,20,0.1); -fx-background-radius: 10;">
+                                             <children>
+                                                <FontIcon iconColor="#00000060" iconLiteral="fa-bookmark" iconSize="20">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </FontIcon>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </VBox>
+                                          <HBox alignment="CENTER" fillHeight="false" prefHeight="39.0" prefWidth="127.0" spacing="10.0" style="-fx-background-color: rgba(20,20,20,0.1); -fx-background-radius: 10;">
+                                             <children>
+                                                <FontIcon iconColor="#00000068" iconLiteral="fa-comment" iconSize="20" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add Response" wrappingWidth="75.94921875">
+                                                   <HBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </Text>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                    <VBox prefHeight="91.0" prefWidth="625.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Comments">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <HBox alignment="CENTER" prefHeight="64.0" prefWidth="625.0" spacing="10.0">
+                                             <children>
+                                                <FontIcon iconColor="#25abc6" iconLiteral="fas-user" iconSize="30" textAlignment="CENTER" wrappingWidth="41.25">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </FontIcon>
+                                                <TextArea prefHeight="65.0" prefWidth="523.0" promptText="Write your comment here" style="-fx-background-color: rgba(20,20,20,0.1); -fx-background-radius: 20;" HBox.hgrow="ALWAYS">
+                                                   <HBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </TextArea>
+                                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                                   <children>
+                                                      <FontIcon iconColor="#25abc6" iconLiteral="fas-chevron-circle-right" iconSize="30">
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                      </FontIcon>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox layoutX="65.0" layoutY="2776.0" prefHeight="441.0" prefWidth="665.0" spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="625.0">
+                                       <children>
+                                          <Label text="Lecture Rescheduling">
+                                             <font>
+                                                <Font name="System Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="59.0" prefWidth="625.0">
+                                       <children>
+                                          <FontIcon iconColor="#25abc6" iconLiteral="fas-user" iconSize="30" textAlignment="CENTER" wrappingWidth="41.25">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </FontIcon>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="466.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label text="Sadia Ahmmed">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Label>
+                                                <Label text="6h ago" />
+                                             </children>
+                                          </VBox>
+                                          <Label alignment="CENTER" prefHeight="35.0" prefWidth="135.0" style="-fx-background-color: rgba(140,140,140,0.1); -fx-background-radius: 10;" text="Accounting" textAlignment="CENTER" textFill="#3e0b65">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="70.0" prefWidth="625.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hi mates, So I talked with Dr Hellen and because of her liner we need to reschedule upcoming. There seems to be something going on here i need a place to live with my dead ass. I think there are many things with holes in them." wrappingWidth="625.0">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="49.0" prefWidth="625.0">
+                                       <children>
+                                          <VBox alignment="CENTER" fillWidth="false" prefHeight="32.0" prefWidth="46.0" style="-fx-background-color: rgba(20,20,20,0.1); -fx-background-radius: 10;">
+                                             <children>
+                                                <FontIcon iconColor="#00000060" iconLiteral="fa-bookmark" iconSize="20">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </FontIcon>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </VBox>
+                                          <HBox alignment="CENTER" fillHeight="false" prefHeight="39.0" prefWidth="127.0" spacing="10.0" style="-fx-background-color: rgba(20,20,20,0.1); -fx-background-radius: 10;">
+                                             <children>
+                                                <FontIcon iconColor="#00000068" iconLiteral="fa-comment" iconSize="20" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add Response" wrappingWidth="75.94921875">
+                                                   <HBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </Text>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                    <VBox prefHeight="91.0" prefWidth="625.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Comments">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <HBox alignment="CENTER" prefHeight="64.0" prefWidth="625.0" spacing="10.0">
+                                             <children>
+                                                <FontIcon iconColor="#25abc6" iconLiteral="fas-user" iconSize="30" textAlignment="CENTER" wrappingWidth="41.25">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </FontIcon>
+                                                <TextArea prefHeight="65.0" prefWidth="523.0" promptText="Write your comment here" style="-fx-background-color: rgba(20,20,20,0.1); -fx-background-radius: 20;" HBox.hgrow="ALWAYS">
+                                                   <HBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </TextArea>
+                                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                                   <children>
+                                                      <FontIcon iconColor="#25abc6" iconLiteral="fas-chevron-circle-right" iconSize="30">
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                      </FontIcon>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox layoutX="65.0" layoutY="3237.0" prefHeight="441.0" prefWidth="665.0" spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="625.0">
+                                       <children>
+                                          <Label text="Lecture Rescheduling">
+                                             <font>
+                                                <Font name="System Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="59.0" prefWidth="625.0">
+                                       <children>
+                                          <FontIcon iconColor="#25abc6" iconLiteral="fas-user" iconSize="30" textAlignment="CENTER" wrappingWidth="41.25">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </FontIcon>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="466.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label text="Sadia Ahmmed">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Label>
+                                                <Label text="6h ago" />
+                                             </children>
+                                          </VBox>
+                                          <Label alignment="CENTER" prefHeight="35.0" prefWidth="135.0" style="-fx-background-color: rgba(140,140,140,0.1); -fx-background-radius: 10;" text="Accounting" textAlignment="CENTER" textFill="#3e0b65">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="70.0" prefWidth="625.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hi mates, So I talked with Dr Hellen and because of her liner we need to reschedule upcoming. There seems to be something going on here i need a place to live with my dead ass. I think there are many things with holes in them." wrappingWidth="625.0">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="49.0" prefWidth="625.0">
+                                       <children>
+                                          <VBox alignment="CENTER" fillWidth="false" prefHeight="32.0" prefWidth="46.0" style="-fx-background-color: rgba(20,20,20,0.1); -fx-background-radius: 10;">
+                                             <children>
+                                                <FontIcon iconColor="#00000060" iconLiteral="fa-bookmark" iconSize="20">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </FontIcon>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </VBox>
+                                          <HBox alignment="CENTER" fillHeight="false" prefHeight="39.0" prefWidth="127.0" spacing="10.0" style="-fx-background-color: rgba(20,20,20,0.1); -fx-background-radius: 10;">
+                                             <children>
+                                                <FontIcon iconColor="#00000068" iconLiteral="fa-comment" iconSize="20" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add Response" wrappingWidth="75.94921875">
+                                                   <HBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </Text>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                    <VBox prefHeight="91.0" prefWidth="625.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Comments">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <HBox alignment="CENTER" prefHeight="64.0" prefWidth="625.0" spacing="10.0">
+                                             <children>
+                                                <FontIcon iconColor="#25abc6" iconLiteral="fas-user" iconSize="30" textAlignment="CENTER" wrappingWidth="41.25">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </FontIcon>
+                                                <TextArea prefHeight="65.0" prefWidth="523.0" promptText="Write your comment here" style="-fx-background-color: rgba(20,20,20,0.1); -fx-background-radius: 20;" HBox.hgrow="ALWAYS">
+                                                   <HBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </TextArea>
+                                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                                   <children>
+                                                      <FontIcon iconColor="#25abc6" iconLiteral="fas-chevron-circle-right" iconSize="30">
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                      </FontIcon>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox layoutX="65.0" layoutY="3698.0" prefHeight="441.0" prefWidth="665.0" spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="44.0" prefWidth="625.0">
+                                       <children>
+                                          <Label text="Lecture Rescheduling">
+                                             <font>
+                                                <Font name="System Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="59.0" prefWidth="625.0">
+                                       <children>
+                                          <FontIcon iconColor="#25abc6" iconLiteral="fas-user" iconSize="30" textAlignment="CENTER" wrappingWidth="41.25">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </FontIcon>
+                                          <VBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="466.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label text="Sadia Ahmmed">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </Label>
+                                                <Label text="6h ago" />
+                                             </children>
+                                          </VBox>
+                                          <Label alignment="CENTER" prefHeight="35.0" prefWidth="135.0" style="-fx-background-color: rgba(140,140,140,0.1); -fx-background-radius: 10;" text="Accounting" textAlignment="CENTER" textFill="#3e0b65">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="70.0" prefWidth="625.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hi mates, So I talked with Dr Hellen and because of her liner we need to reschedule upcoming. There seems to be something going on here i need a place to live with my dead ass. I think there are many things with holes in them." wrappingWidth="625.0">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="49.0" prefWidth="625.0">
+                                       <children>
+                                          <VBox alignment="CENTER" fillWidth="false" prefHeight="32.0" prefWidth="46.0" style="-fx-background-color: rgba(20,20,20,0.1); -fx-background-radius: 10;">
+                                             <children>
+                                                <FontIcon iconColor="#00000060" iconLiteral="fa-bookmark" iconSize="20">
+                                                   <VBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </FontIcon>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </VBox>
+                                          <HBox alignment="CENTER" fillHeight="false" prefHeight="39.0" prefWidth="127.0" spacing="10.0" style="-fx-background-color: rgba(20,20,20,0.1); -fx-background-radius: 10;">
+                                             <children>
+                                                <FontIcon iconColor="#00000068" iconLiteral="fa-comment" iconSize="20" />
+                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Add Response" wrappingWidth="75.94921875">
+                                                   <HBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </Text>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                             </HBox.margin>
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                    <VBox prefHeight="91.0" prefWidth="625.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Comments">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Text>
+                                          <HBox alignment="CENTER" prefHeight="64.0" prefWidth="625.0" spacing="10.0">
+                                             <children>
+                                                <FontIcon iconColor="#25abc6" iconLiteral="fas-user" iconSize="30" textAlignment="CENTER" wrappingWidth="41.25">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                </FontIcon>
+                                                <TextArea prefHeight="65.0" prefWidth="523.0" promptText="Write your comment here" style="-fx-background-color: rgba(20,20,20,0.1); -fx-background-radius: 20;" HBox.hgrow="ALWAYS">
+                                                   <HBox.margin>
+                                                      <Insets bottom="10.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </TextArea>
+                                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                                   <children>
+                                                      <FontIcon iconColor="#25abc6" iconLiteral="fas-chevron-circle-right" iconSize="30">
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                      </FontIcon>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@../../forumSub.css" />
+      <URL value="@../../chatMain.css" />
+   </stylesheets>
+</AnchorPane>

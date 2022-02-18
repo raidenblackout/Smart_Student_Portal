@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.layout.HBox?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="340.0" spacing="10.0" style="-fx-border-style: hidden none solid none; -fx-border-color: rgba(0.1,0.1,0.1,0.1);" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="292.0" text="Need to finish homework" wrapText="true" />
+      <FontIcon iconColor="RED" iconLiteral="fas-times" iconSize="20" />
+   </children>
+   <padding>
+      <Insets left="10.0" />
+   </padding>
+</HBox>

@@ -1,0 +1,132 @@
+HBox > *{
+    -fx-background-color: rgba(255, 255, 255,1);
+}
+.root{
+    -fx-background-color: rgba(20, 20, 20,0.1);
+}
+#leftsidepanel{
+    -fx-background-color: rgba(30, 161, 201,1);
+}
+
+.darker{
+    -fx-background-color: rgba(50, 50, 50,1);
+}
+.card-label{
+    -fx-border-radius: 0 0 10 10;
+    -fx-background-radius: 0 0 10 10;
+    -fx-background-color: white;
+}
+.cards{
+    -fx-background-color: white;
+    -fx-background-radius: 50 50 0 0;
+    -fx-border-radius: 50 50 0 0;
+}
+.pack{
+    -fx-background-color: white;
+    -fx-background-radius: 0 0 50 50;
+}
+.tab-pane *.tab-header-area *.tab-header-background {
+  -fx-background-color:transparent;
+}
+.tab-pane {
+    -fx-background-color:transparent;
+}
+.tab-pane .gadgetbg{
+    -fx-background-color:white;
+}
+.tab {
+  -fx-font-family: Arial;
+  -fx-font-size: 18;
+  -fx-background-color: white;
+}
+
+.tab:selected {
+    -fx-background-color: rgba(30, 161, 201,1);
+    -fx-text-base-color: white;
+}
+.buttons:hover{
+    -fx-background-color: rgba(30, 161, 201,0.5);
+}
+.buttons{
+    -fx-background-color:  #00bfff;
+}
+.dashboard-items:hover{
+    -fx-background-color: rgba(30, 161, 201,1);
+}
+.text-field:focused{
+    -fx-background-color: rgba(30, 161, 201,0.5);
+}
+.cancel-button{
+    -fx-background-color: rgba(255, 255, 255,1);
+    -fx-text-fill: rgba(30, 161, 201,1);
+    -fx-border-color: rgba(30, 161, 201,1);
+}
+.cancel-button:hover{
+    -fx-background-color: rgba(169, 196, 212,1);
+    -fx-text-fill: white;
+}
+.text-blue{
+    -fx-text-fill: rgba(30, 161, 201,1);
+}
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color :transparent;
+    -fx-border-color :transparent;
+    -fx-background-radius : 0.0em;
+    -fx-border-radius :2.0em;
+}
+
+
+.scroll-bar:horizontal .increment-button ,
+.scroll-bar:horizontal .decrement-button {
+    -fx-background-color :transparent;
+    -fx-background-radius : 0.0em;
+    -fx-padding :0.0 0.0 10.0 0.0;
+
+}
+
+.scroll-bar:vertical .increment-button ,
+.scroll-bar:vertical .decrement-button {
+    -fx-background-color :transparent;
+    -fx-background-radius : 0.0em;
+    -fx-padding :0.0 10.0 0.0 0.0;
+
+}
+
+ .scroll-bar .increment-arrow,
+ .scroll-bar .decrement-arrow{
+    -fx-shape : " ";
+    -fx-padding :0.15em 0.0;
+}
+
+ .scroll-bar:vertical .increment-arrow,
+ .scroll-bar:vertical .decrement-arrow{
+    -fx-shape : " ";
+    -fx-padding :0.0 0.15em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color :derive(black,90.0%);
+    -fx-background-insets : 2.0, 0.0, 0.0;
+    -fx-background-radius : 2.0em;
+}
+
+.scroll-bar:horizontal .thumb:hover,
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color :derive(#4D4C4F,10.0%);
+    -fx-background-insets : 2.0, 0.0, 0.0;
+    -fx-background-radius : 2.0em;
+}
+.chart{
+    -fx-background-color: white;
+    -fx-horizontal-grid-lines-visible: false;
+    -fx-vertical-grid-lines-visible: false;
+    -fx-horizontal-zero-line-visible: false;
+    -fx-region-background: red;
+}
+
+.axis-label { -fx-text-fill: #008800; }
+.forumPP:hover{
+    -fx-background-color: rgba(0.1,0.1,0.1,0.1);
+}

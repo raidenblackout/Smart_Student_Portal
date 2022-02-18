@@ -1,0 +1,15 @@
+.root{
+    -fx-background-color: rgba(30, 161, 201,1);
+    -fx-background-radius: 20;
+}
+.button{
+    -fx-background-color:  #00cfff;
+    -fx-text-fill: white;
+}
+.button:hover{
+    -fx-background-color: rgba(132,135,80,1);
+}
+.err{
+    -fx-fill: red;
+    -fx-font-size: 12;
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane prefHeight="702.0" prefWidth="950.0" style="-fx-background-color: rgba(30, 161, 201,1);" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER" prefHeight="124.0" prefWidth="950.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="CENTER_LEFT" prefHeight="124.0" prefWidth="0.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <FontIcon iconColor="WHITE" iconLiteral="fa-arrow-left" iconSize="14" onMouseClicked="#goBack">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontIcon>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label text="Course Plan For Existing Students" textFill="WHITE">
+                     <font>
+                        <Font size="45.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <TableView fx:id="courses" layoutY="124.0" prefHeight="578.0" prefWidth="950.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="124.0">
+        <columns>
+          <TableColumn fx:id="index" prefWidth="61.0" text="Index" />
+          <TableColumn fx:id="c_name" minWidth="0.0" prefWidth="199.0" text="Course name" />
+            <TableColumn fx:id="c_code" prefWidth="92.0" text="Course code" />
+            <TableColumn fx:id="c_credit" prefWidth="122.0" text="Credits" />
+            <TableColumn fx:id="c_status" prefWidth="122.0" text="Completed" />
+            <TableColumn fx:id="c_faculty" prefWidth="68.0" text="Faculty" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

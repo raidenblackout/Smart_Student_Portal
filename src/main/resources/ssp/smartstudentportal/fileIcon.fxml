@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.HBox?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<?import org.kordamp.ikonli.javafx.StackedFontIcon?>
+
+<HBox fx:id="root" prefHeight="46.0" prefWidth="100.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ssp.smartstudentportal.FileIconController">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: grey; -fx-background-radius: 5px;" />
+      <StackedFontIcon alignment="TOP_CENTER" iconColor="#454240" translateX="-13.0">
+         <children>
+            <FontIcon iconColor="#da6a0f" iconLiteral="fa-times" />
+            <FontIcon iconColor="#d06518" iconLiteral="far-circle" onMouseClicked="#onCross">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontIcon>
+         </children>
+      </StackedFontIcon>
+   </children>
+</HBox>

@@ -1,0 +1,9 @@
+.bg-forum{
+    -fx-background-color: linear-gradient(to bottom, #f2f2f2, #d9d9d9);
+}
+.scroll-pane .viewport {
+       -fx-background-color: transparent;
+}
+.scroll-pane{
+   -fx-background-color:transparent;
+}

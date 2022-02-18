@@ -1,0 +1,30 @@
+.rounded-corners
+{
+     -fx-background-radius: 10;
+     -fx-border-radius: 10;
+}
+.side-bar
+{
+         -fx-background-color: rgba(30, 161, 201,1);
+         -fx-background-radius: 20;
+}
+.button{
+    -fx-background-color:  #00cfff;
+    -fx-text-fill: white;
+}
+.button:hover{
+    -fx-background-color: rgba(132,135,80,1);
+}
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color :derive(black,90.0%);
+    -fx-background-insets : 2.0, 0.0, 0.0;
+    -fx-background-radius : 2.0em;
+}
+
+.scroll-bar:horizontal .thumb:hover,
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color :derive(#4D4C4F,10.0%);
+    -fx-background-insets : 2.0, 0.0, 0.0;
+    -fx-background-radius : 2.0em;
+}

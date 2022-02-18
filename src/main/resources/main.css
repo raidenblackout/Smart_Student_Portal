@@ -1,0 +1,26 @@
+.root{
+    -fx-background-color: rgba(30, 161, 201,1);
+}
+.button{
+    -fx-background-color:  #00cfff;
+    -fx-text-fill: white;
+}
+.button:hover{
+    -fx-background-color: rgba(132,135,80,1);
+}
+#exitButton{
+    -fx-background-color: rgba(200,0,0,1);
+    -fx-text-fill: white;
+}
+#exitButton:hover{
+    -fx-background-color: rgba(200,0,0,0.5);
+    -fx-text-fill: white;
+}
+#welcomeLabel{
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+}
+
+#myicon{
+    -fx-icon-color: white;
+}

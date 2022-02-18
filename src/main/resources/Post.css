@@ -1,0 +1,8 @@
+.post-container {
+    -fx-border-style:  hidden none solid none;
+    -fx-border-color:  rgba(30, 161, 201,1);
+}
+.comment-container{
+    -fx-border-style:  hidden none solid none;
+     -fx-border-color:  rgba(30, 161, 201,1);
+}

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="797.0" prefWidth="1131.0" styleClass="blue-main" stylesheets="@../../loginWindow.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="255.0" layoutY="24.0" prefHeight="779.0" prefWidth="597.0" spacing="10.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="68.0" prefWidth="630.0">
+               <children>
+                  <Text fill="#1ea1c9" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign Up">
+                     <styleClass>
+                        <String fx:value="label-bold-font" />
+                        <String fx:value="font-main" />
+                        <String fx:value="blue-font" />
+                     </styleClass></Text>
+               </children>
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin></HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="50.0" prefHeight="25.0" prefWidth="531.0">
+               <children>
+                  <Text fx:id="error" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="err" />
+               </children>
+            </HBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="391.0" spacing="5.0">
+               <children>
+                  <Label text="First Name">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="font-main" />
+                        <String fx:value="bold-font-main" />
+                        <String fx:value="blue-font" />
+                     </styleClass>
+                  </Label>
+                  <TextField fx:id="fname" prefHeight="37.0" prefWidth="390.0" />
+               </children>
+               <VBox.margin>
+                  <Insets left="100.0" right="100.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" layoutX="110.0" layoutY="178.0" prefHeight="80.0" prefWidth="430.0" spacing="5.0">
+               <children>
+                  <Label text="Last Name">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="font-main" />
+                        <String fx:value="bold-font-main" />
+                        <String fx:value="blue-font" />
+                     </styleClass>
+                  </Label>
+                  <TextField fx:id="lname" prefHeight="37.0" prefWidth="430.0" />
+               </children>
+               <VBox.margin>
+                  <Insets left="100.0" right="100.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="430.0" spacing="5.0">
+               <children>
+                  <Label text="Username">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="font-main" />
+                        <String fx:value="bold-font-main" />
+                        <String fx:value="blue-font" />
+                     </styleClass>
+                  </Label>
+                  <TextField fx:id="username" prefHeight="37.0" prefWidth="430.0" />
+               </children>
+               <VBox.margin>
+                  <Insets left="100.0" right="100.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" layoutX="110.0" layoutY="289.0" prefHeight="80.0" prefWidth="430.0" spacing="5.0">
+               <children>
+                  <Label text="Email">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="font-main" />
+                        <String fx:value="bold-font-main" />
+                        <String fx:value="blue-font" />
+                     </styleClass>
+                  </Label>
+                  <TextField fx:id="email" prefHeight="37.0" prefWidth="430.0" />
+               </children>
+               <VBox.margin>
+                  <Insets left="100.0" right="100.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="400.0" prefHeight="80.0" prefWidth="430.0" spacing="5.0">
+               <children>
+                  <Label text="Password">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="font-main" />
+                        <String fx:value="bold-font-main" />
+                        <String fx:value="blue-font" />
+                     </styleClass>
+                  </Label>
+                  <PasswordField fx:id="pword" prefHeight="37.0" prefWidth="430.0" />
+               </children>
+               <VBox.margin>
+                  <Insets left="100.0" right="100.0" />
+               </VBox.margin>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="0.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#signUp" prefHeight="46.0" prefWidth="307.0" text="Sign Up">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <styleClass>
+                        <String fx:value="font-main" />
+                        <String fx:value="blue-main" />
+                        <String fx:value="card" />
+                        <String fx:value="white-font" />
+                        <String fx:value="btn" />
+                     </styleClass>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="44.0" prefWidth="551.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Already have an account?" />
+                  <Text fill="#004b5e" layoutX="253.0" layoutY="47.0" onMouseClicked="#showLoginWindow" strokeType="OUTSIDE" strokeWidth="0.0" text="Login here">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Text>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <styleClass>
+            <String fx:value="white-main" />
+            <String fx:value="card" />
+         </styleClass>
+      </VBox>
+   </children>
+</AnchorPane>

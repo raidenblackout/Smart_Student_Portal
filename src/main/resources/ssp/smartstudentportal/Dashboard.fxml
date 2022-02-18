@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane fx:id="root" maxWidth="1326.0" prefHeight="861.0" prefWidth="1326.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox id="leftsidepanel" alignment="CENTER" prefHeight="861.0" prefWidth="217.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="profilePic" fitHeight="150.0" fitWidth="189.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/pexels-photo-771742.jpeg" />
+               </image>
+            </ImageView>
+            <HBox alignment="CENTER" prefHeight="60.0" prefWidth="186.0" styleClass="dashboard-items">
+               <children>
+                  <Group styleClass="dashboard-items">
+                     <children>
+                        <FontIcon iconColor="WHITE" iconLiteral="fa-home" iconSize="30" layoutY="15.0" wrappingWidth="26.66666316986084" />
+                        <Label alignment="CENTER" layoutY="-6.0" prefHeight="19.0" prefWidth="153.0" style="-fx-background-color: transparent;" text="Dashboard" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Group>
+               </children>
+               <effect>
+                  <Glow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" onMouseClicked="#showCourseWindow" prefHeight="60.0" prefWidth="200.0" styleClass="dashboard-items">
+               <children>
+                  <Group styleClass="dashboard-items">
+                     <children>
+                        <FontIcon iconColor="WHITE" iconLiteral="fa-book" iconSize="30" layoutY="15.0" wrappingWidth="26.66666316986084" />
+                        <Label alignment="CENTER" layoutY="-6.0" prefHeight="19.0" prefWidth="153.0" style="-fx-background-color: transparent;" text="Courses" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Group>
+               </children>
+               <effect>
+                  <Glow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="30.0" layoutY="885.0" onMouseClicked="#showProfile" prefHeight="60.0" prefWidth="200.0" styleClass="dashboard-items">
+               <children>
+                  <Group styleClass="dashboard-items">
+                     <children>
+                        <FontIcon iconColor="WHITE" iconLiteral="fa-user" iconSize="30" layoutY="15.0" wrappingWidth="26.66666316986084" />
+                        <Label alignment="CENTER" layoutY="-6.0" prefHeight="17.0" prefWidth="153.0" style="-fx-background-color: transparent;" text="Profile" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Group>
+               </children>
+               <effect>
+                  <Glow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="30.0" layoutY="868.0" onMouseClicked="#showForum" prefHeight="60.0" prefWidth="200.0" styleClass="dashboard-items">
+               <children>
+                  <Group styleClass="dashboard-items">
+                     <children>
+                        <FontIcon iconColor="WHITE" iconLiteral="fa-laptop" iconSize="30" layoutY="15.0" wrappingWidth="26.66666316986084" />
+                        <Label alignment="CENTER" layoutY="-6.0" prefHeight="17.0" prefWidth="153.0" style="-fx-background-color: transparent;" text="Forum" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Group>
+               </children>
+               <effect>
+                  <Glow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="30.0" layoutY="841.0" onMouseClicked="#showChat" prefHeight="60.0" prefWidth="200.0" styleClass="dashboard-items">
+               <children>
+                  <Group styleClass="dashboard-items">
+                     <children>
+                        <FontIcon iconColor="WHITE" iconLiteral="fas-dove" iconSize="30" layoutY="15.0" wrappingWidth="26.66666316986084" />
+                        <Label alignment="CENTER" layoutY="-6.0" prefHeight="17.0" prefWidth="153.0" style="-fx-background-color: transparent;" text="Chat" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Group>
+               </children>
+               <effect>
+                  <Glow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="740.0" prefHeight="27.0" prefWidth="217.0" styleClass="dashboard-items" VBox.vgrow="ALWAYS">
+               <effect>
+                  <Glow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="10.0" layoutY="740.0" onMouseClicked="#onExit" prefHeight="60.0" prefWidth="200.0" styleClass="dashboard-items">
+               <children>
+                  <Group layoutX="153.0" styleClass="dashboard-items">
+                     <children>
+                        <FontIcon iconColor="#1e1e1e" iconLiteral="fa-window-close" iconSize="30" layoutY="15.0" wrappingWidth="26.66666316986084" />
+                        <Label alignment="CENTER" layoutY="-7.0" prefHeight="17.0" prefWidth="153.0" text="Exit">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Group>
+               </children>
+               <effect>
+                  <Glow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+         </children>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </VBox>
+      <VBox alignment="TOP_CENTER" layoutX="233.0" layoutY="27.0" prefWidth="774.0" spacing="30.0" AnchorPane.bottomAnchor="19.0" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="319.0" AnchorPane.topAnchor="27.0">
+         <children>
+            <VBox fx:id="skillsPieChart" alignment="TOP_CENTER" prefHeight="388.0" prefWidth="763.0" style="-fx-background-color: white;" styleClass="card">
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="407.0" prefWidth="773.0" spacing="30.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox fx:id="cgpaGraph" alignment="CENTER" prefHeight="402.0" prefWidth="359.0" style="-fx-background-color: white;" styleClass="card">
+                     <children>
+                        <TabPane prefHeight="409.0" prefWidth="359.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="Reminder">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <ScrollPane fitToWidth="true" layoutY="42.0" prefHeight="330.0" prefWidth="359.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="42.0">
+                                             <content>
+                                                <VBox fx:id="reminderList" prefWidth="100.0" spacing="5.0">
+                                                   <padding>
+                                                      <Insets left="5.0" right="5.0" />
+                                                   </padding>
+                                                </VBox>
+                                             </content>
+                                          </ScrollPane>
+                                          <FontIcon fx:id="showPopup" iconColor="#00b2ff" iconLiteral="fas-plus" iconSize="20" layoutX="319.0" layoutY="22.0" onMouseClicked="#showAddReminder" text="">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </FontIcon>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                              <Tab text="Todo List">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <ScrollPane fitToWidth="true" layoutY="42.0" prefHeight="330.0" prefWidth="359.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="42.0">
+                                             <content>
+                                                <VBox fx:id="todoListContainer" prefWidth="100.0" spacing="5.0">
+                                                   <children>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="340.0" spacing="10.0" style="-fx-border-style: hidden none solid none; -fx-border-color: rgba(0.1,0.1,0.1,0.1);">
+                                                         <children>
+                                                            <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="293.0" text="Need to finish homework" wrapText="true" />
+                                                            <FontIcon iconColor="RED" iconLiteral="fas-times" iconSize="20" />
+                                                         </children>
+                                                         <VBox.margin>
+                                                            <Insets />
+                                                         </VBox.margin>
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="10.0" prefHeight="40.0" prefWidth="340.0" spacing="10.0" style="-fx-border-style: hidden none solid none; -fx-border-color: rgba(0.1,0.1,0.1,0.1);">
+                                                         <children>
+                                                            <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="293.0" text="Need to finish homework" wrapText="true" />
+                                                            <FontIcon iconColor="RED" iconLiteral="fas-times" iconSize="20" />
+                                                         </children>
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="50.0" prefHeight="40.0" prefWidth="340.0" spacing="10.0" style="-fx-border-style: hidden none solid none; -fx-border-color: rgba(0.1,0.1,0.1,0.1);">
+                                                         <children>
+                                                            <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="293.0" text="Need to finish homework" wrapText="true" />
+                                                            <FontIcon iconColor="RED" iconLiteral="fas-times" iconSize="20" />
+                                                         </children>
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="90.0" prefHeight="40.0" prefWidth="340.0" spacing="10.0" style="-fx-border-style: hidden none solid none; -fx-border-color: rgba(0.1,0.1,0.1,0.1);">
+                                                         <children>
+                                                            <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="293.0" text="Need to finish homework" wrapText="true" />
+                                                            <FontIcon iconColor="RED" iconLiteral="fas-times" iconSize="20" />
+                                                         </children>
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="130.0" prefHeight="40.0" prefWidth="340.0" spacing="10.0" style="-fx-border-style: hidden none solid none; -fx-border-color: rgba(0.1,0.1,0.1,0.1);">
+                                                         <children>
+                                                            <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="293.0" text="Need to finish homework" wrapText="true" />
+                                                            <FontIcon iconColor="RED" iconLiteral="fas-times" iconSize="20" />
+                                                         </children>
+                                                         <padding>
+                                                            <Insets left="10.0" />
+                                                         </padding>
+                                                      </HBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets left="5.0" right="5.0" />
+                                                   </padding>
+                                                </VBox>
+                                             </content>
+                                          </ScrollPane>
+                                          <FontIcon fx:id="addTodoList" iconColor="#00b2ff" iconLiteral="fas-plus" iconSize="20" layoutX="319.0" layoutY="22.0" onMouseClicked="#showAddTodoList" text="">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </FontIcon>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children></VBox>
+                  <Pane prefHeight="407.0" prefWidth="384.0" style="-fx-background-color: white;" styleClass="card">
+                     <children>
+                        <Label layoutX="14.0" layoutY="21.0" text="Forums">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Text layoutX="303.0" layoutY="39.0" onMouseClicked="#showForum" strokeType="OUTSIDE" strokeWidth="0.0" text="View All">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Text>
+                        <FontIcon iconLiteral="fas-chevron-right" layoutX="354.0" layoutY="39.0" onMouseClicked="#showForum" wrappingWidth="13.5" />
+                        <ScrollPane fitToWidth="true" layoutX="10.0" layoutY="72.0" prefHeight="330.0" prefWidth="362.0" style="-fx-background-radius: 20;">
+                           <content>
+                              <VBox fx:id="dashboardForums" prefWidth="100.0" spacing="10.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="33.0" prefWidth="360.0">
+                                       <children>
+                                          <VBox alignment="CENTER" prefHeight="150.0" prefWidth="119.0">
+                                             <children>
+                                                <ImageView fitHeight="66.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../Images/photo-1453728013993-6d66e9c9123a.jpg" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </VBox>
+                                          <Label text="UIU EDF">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="1023.0" layoutY="26.0" prefHeight="815.0" prefWidth="282.0" style="-fx-background-color: white;" styleClass="card" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="21.0" AnchorPane.topAnchor="26.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-border-style: hidden none solid none;">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-radius: 20;">
+                     <children>
+                        <ImageView fx:id="rightPPImage" fitHeight="53.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/photo-1453728013993-6d66e9c9123a.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <Label fx:id="userFullname" text="Monica Howard">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Text fx:id="username" strokeType="OUTSIDE" strokeWidth="0.0" text="011201232" />
+                     </children>
+                  </VBox>
+                  <FontIcon iconColor="TRANSPARENT" iconLiteral="fa-bell" iconSize="25" stroke="BLACK" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="25.0">
+                     <font>
+                        <Font name="System Bold" size="41.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontIcon>
+                  <FontIcon iconColor="#6e6a6a00" iconLiteral="fa-cog" iconSize="30" onMouseClicked="#showLogOut" stroke="BLACK" text="" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="33.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontIcon>
+               </children>
+            </HBox>
+            <VBox fx:id="calendarContainer" prefHeight="291.0" prefWidth="282.0" style="-fx-border-style: hidden none solid none; -fx-border-color: rgba(50,50,50,0.2);" />
+            <VBox prefHeight="388.0" prefWidth="242.0" spacing="20.0">
+               <children>
+                  <Label text="Routine">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <ScrollPane fitToWidth="true" prefHeight="365.0" prefWidth="242.0">
+                     <content>
+                        <VBox prefWidth="100.0" spacing="10.0">
+                           <children>
+                              <HBox prefWidth="200.0" spacing="10.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="11 AM" />
+                                    <Label text="Database Management System" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="10.0" prefWidth="200.0" spacing="10.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="11 AM" />
+                                    <Label text="Database Management System" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="37.0" prefWidth="200.0" spacing="10.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="11 AM" />
+                                    <Label text="Database Management System" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="64.0" prefWidth="200.0" spacing="10.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="11 AM" />
+                                    <Label text="Database Management System" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="91.0" prefWidth="200.0" spacing="10.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="11 AM" />
+                                    <Label text="Database Management System" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="118.0" prefWidth="200.0" spacing="10.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="11 AM" />
+                                    <Label text="Database Management System" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="145.0" prefWidth="200.0" spacing="10.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="11 AM" />
+                                    <Label text="Database Management System" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="172.0" prefWidth="200.0" spacing="10.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="11 AM" />
+                                    <Label text="Database Management System" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="199.0" prefWidth="200.0" spacing="10.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="11 AM" />
+                                    <Label text="Database Management System" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="226.0" prefWidth="200.0" spacing="10.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="11 AM" />
+                                    <Label text="Database Management System" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="253.0" prefWidth="200.0" spacing="10.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="11 AM" />
+                                    <Label text="Database Management System" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="280.0" prefWidth="200.0" spacing="10.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="11 AM" />
+                                    <Label text="Database Management System" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+   <stylesheets>
+      <URL value="@../../task-manager.css" />
+      <URL value="@../../transparentScrollpane.css" />
+      <URL value="@../../card.css" />
+      <URL value="@../../tileCustomizations.css" />
+      <URL value="@../../test.css" />
+   </stylesheets>
+</AnchorPane>

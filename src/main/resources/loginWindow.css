@@ -1,0 +1,41 @@
+.blue-main{
+    -fx-background-color: rgba(30, 161, 201,1);
+    -fx-text-fill: white;
+}
+.white-main{
+    -fx-background-color: rgba(255, 255, 255,1);
+ }
+ .font-main{
+    -fx-font-size: 20px;
+    -fx-font-family: 'Roboto';
+    -fx-text-fill: rgba(0, 0, 0,1);
+ }
+ .bold-font-main{
+    -fx-font-weight: bold;
+    -fx-text-fill: rgba(0, 0, 0,1);
+ }
+.label-bold-font{
+    -fx-font-size: 40px;
+    -fx-font-family: 'Roboto';
+}
+.card{
+    -fx-effect: dropshadow(three-pass-box, rgba(122,122,122,0.5), 10, 0, 0, 0);
+    -fx-background-radius: 10;
+}
+.white-font{
+    -fx-text-fill: white;
+}
+.blue-font{
+    -fx-text-fill: rgba(30, 161, 201,1);
+}
+.btn:hover{
+    -fx-background-color: rgba(30, 161, 201,0.7);
+    -fx-text-fill: white;
+}
+.err{
+    -fx-text-fill: red;
+    -fx-font-size: 15px;
+}
+.icon-background{
+    -fx-background-color: rgba(30, 161, 201,1);
+}
